@@ -1,21 +1,53 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+// SPDX-License-Identifier: AGPL-3.0-or-later
+pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
-import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
+import {MerkleProof} from "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-import "./interfaces/ICumulativeMerkleDrop.sol";
-
-contract CumulativeMerkleDrop is Ownable, ICumulativeMerkleDrop {
+/**
+ * @title RewardsDistributor
+ * @notice Distributes rewards to users based on Merkle tree algorithm
+ */
+contract RewardsDistributor is Ownable {
     using SafeERC20 for IERC20;
     using MerkleProof for bytes32[];
 
-    address public immutable override token;
-    address public rewardsHolder;
+    /**
+     * @notice Signals that the rewards holder address has been updated
+     * @param oldRewardsHolder The previous rewards holder address
+     * @param newRewardsHolder The new rewards holder address
+     */
+    event RewardsHolderUpdated(
+        address oldRewardsHolder,
+        address newRewardsHolder
+    );
 
-    bytes32 public override merkleRoot;
+    /**
+     * @notice Signals that the Merkle Root has been updated
+     * @param oldMerkleRoot The previous Merkle Root
+     * @param newMerkleRoot The new Merkle Root
+     */
+    event MerkleRootUpdated(bytes32 oldMerkleRoot, bytes32 newMerkleRoot);
+
+    /**
+     * @notice Signals that a claim has been succesfully processed
+     * @param stakingProvider The staking provider address of the claim
+     * @param amount The amount claimed
+     * @param beneficiary The beneficiary address
+     * @param merkleRoot The Merkle root used for the claim
+     */
+    event Claimed(
+        address indexed stakingProvider,
+        uint256 amount,
+        address beneficiary,
+        bytes32 merkleRoot
+    );
+
+    address public immutable TOKEN;
+    address public rewardsHolder;
+    bytes32 public merkleRoot;
     mapping(address => uint256) public cumulativeClaimed;
     struct Claim {
         address stakingProvider;
@@ -24,58 +56,93 @@ contract CumulativeMerkleDrop is Ownable, ICumulativeMerkleDrop {
         bytes32[] proof;
     }
 
-    constructor(address token_, address rewardsHolder_, address newOwner) {
-        require(IERC20(token_).totalSupply() > 0, "Token contract must be set");
+    /**
+     * @notice Constructor for the RewardsDistributor contract
+     * @param _initialOwner Address to be the owner of the contract
+     * @param _token Token contract address
+     * @param _rewardsHolder Rewards holder address
+     */
+    constructor(
+        address _initialOwner,
+        address _token,
+        address _rewardsHolder
+    ) Ownable(_initialOwner) {
+        require(IERC20(_token).totalSupply() > 0, "Token contract must be set");
         require(
-            rewardsHolder_ != address(0),
-            "Rewards Holder must be an address"
-        );
-        transferOwnership(newOwner);
-        token = token_;
-        rewardsHolder = rewardsHolder_;
-    }
-
-    function setMerkleRoot(bytes32 merkleRoot_) external override onlyOwner {
-        emit MerkelRootUpdated(merkleRoot, merkleRoot_);
-        merkleRoot = merkleRoot_;
-    }
-
-    function setRewardsHolder(address rewardsHolder_) external onlyOwner {
-        require(
-            rewardsHolder_ != address(0),
+            _rewardsHolder != address(0),
             "Rewards holder must be an address"
         );
-        emit RewardsHolderUpdated(rewardsHolder, rewardsHolder_);
-        rewardsHolder = rewardsHolder_;
+
+        TOKEN = _token;
+        rewardsHolder = _rewardsHolder;
     }
 
+    /**
+     * @notice Sets the address from where Merkle rewards are being pulled
+     * @param newRewardsHolder New rewards holder address
+     */
+    function setRewardsHolder(
+        address newRewardsHolder
+    ) external onlyOwner {
+        require(
+            newRewardsHolder != address(0),
+            "Rewards Holder must be an address"
+        );
+        emit RewardsHolderUpdated(rewardsHolder, newRewardsHolder);
+        rewardsHolder = newRewardsHolder;
+    }
+
+    /**
+     * @notice Sets a new Merkle root
+     * @param newMerkleRoot New Merkle root
+     */
+    function setMerkleRoot(bytes32 newMerkleRoot) external onlyOwner {
+        emit MerkleRootUpdated(merkleRoot, newMerkleRoot);
+        merkleRoot = newMerkleRoot;
+    }
+
+    /**
+     * @notice Claims rewards of an address sending them to beneficiary address
+     * @param stakingProvider Staking provider address of the stake
+     * @param beneficiary Beneficiary address of the stake
+     * @param cumulativeAmount Cumulative amount of rewards of the stake
+     * @param expectedMerkleRoot Expected merkle root currently set
+     * @param merkleProof Merkle proof to validate the claim
+     */
     function claim(
         address stakingProvider,
         address beneficiary,
         uint256 cumulativeAmount,
         bytes32 expectedMerkleRoot,
         bytes32[] calldata merkleProof
-    ) public override {
-        require(merkleRoot == expectedMerkleRoot, "Merkle root was updated");
+    ) public {
+        require(
+            merkleRoot == expectedMerkleRoot,
+            "Wrong Merkle root. Was it updated?"
+        );
 
         // Verify the merkle proof
         bytes32 leaf = keccak256(
-            abi.encodePacked(stakingProvider, beneficiary, cumulativeAmount)
+            abi.encodePacked(
+                stakingProvider,
+                beneficiary,
+                cumulativeAmount
+            )
         );
         require(
-            _verifyAsm(merkleProof, expectedMerkleRoot, leaf),
-            "Invalid proof"
+            merkleProof.verify(merkleRoot, leaf),
+            "Invalid Merkle proof provided"
         );
 
         // Mark it claimed
-        uint256 preclaimed = cumulativeClaimed[stakingProvider];
-        require(preclaimed < cumulativeAmount, "Nothing to claim");
+        uint256 alreadyClaimed = cumulativeClaimed[stakingProvider];
+        require(alreadyClaimed < cumulativeAmount, "Nothing to claim");
         cumulativeClaimed[stakingProvider] = cumulativeAmount;
 
-        // Send the token
+        // Send the tokens
         unchecked {
-            uint256 amount = cumulativeAmount - preclaimed;
-            IERC20(token).safeTransferFrom(rewardsHolder, beneficiary, amount);
+            uint256 amount = cumulativeAmount - alreadyClaimed;
+            IERC20(TOKEN).safeTransferFrom(rewardsHolder, beneficiary, amount);
             emit Claimed(
                 stakingProvider,
                 amount,
@@ -85,61 +152,23 @@ contract CumulativeMerkleDrop is Ownable, ICumulativeMerkleDrop {
         }
     }
 
+    /**
+     * @notice Claim a batch of rewards in a single transaction
+     * @param expectedMerkleRoot Expected merkle root currently set
+     * @param claims Array of claims to process
+     */
     function batchClaim(
         bytes32 expectedMerkleRoot,
-        Claim[] calldata Claims
+        Claim[] calldata claims
     ) external {
-        for (uint i; i < Claims.length; i++) {
+        for (uint i; i < claims.length; i++) {
             claim(
-                Claims[i].stakingProvider,
-                Claims[i].beneficiary,
-                Claims[i].amount,
+                claims[i].stakingProvider,
+                claims[i].beneficiary,
+                claims[i].amount,
                 expectedMerkleRoot,
-                Claims[i].proof
+                claims[i].proof
             );
-        }
-    }
-
-    function verify(
-        bytes32[] calldata merkleProof,
-        bytes32 root,
-        bytes32 leaf
-    ) public pure returns (bool) {
-        return merkleProof.verify(root, leaf);
-    }
-
-    function _verifyAsm(
-        bytes32[] calldata proof,
-        bytes32 root,
-        bytes32 leaf
-    ) private pure returns (bool valid) {
-        // solhint-disable-next-line no-inline-assembly
-        assembly {
-            let mem1 := mload(0x40)
-            let mem2 := add(mem1, 0x20)
-            let ptr := proof.offset
-
-            for {
-                let end := add(ptr, mul(0x20, proof.length))
-            } lt(ptr, end) {
-                ptr := add(ptr, 0x20)
-            } {
-                let node := calldataload(ptr)
-
-                switch lt(leaf, node)
-                case 1 {
-                    mstore(mem1, leaf)
-                    mstore(mem2, node)
-                }
-                default {
-                    mstore(mem1, node)
-                    mstore(mem2, leaf)
-                }
-
-                leaf := keccak256(mem1, 0x40)
-            }
-
-            valid := eq(root, leaf)
         }
     }
 }

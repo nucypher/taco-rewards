@@ -107,12 +107,12 @@ contract RewardsDistributorTest is Test {
         vm.expectRevert(
             "OwnableUnauthorizedAccount(0x00002b80de79C334e5949fcB3fe8667d1Da410FB)"
         );
-        rewardsDistributor.setMerkleRewardsHolder(REWARDS_HOLDER);
+        rewardsDistributor.setRewardsHolder(REWARDS_HOLDER);
 
         // only valid addresses can be set as rewards holder
         vm.prank(owner);
         vm.expectRevert("Rewards Holder must be an address");
-        rewardsDistributor.setMerkleRewardsHolder(address(0));
+        rewardsDistributor.setRewardsHolder(address(0));
 
         // check rewards holder is updated and event emitted
         address newRewardsHolder = 0xffff8E99e52DBfb8C305dE942f842C882aD2D1a5;
@@ -122,7 +122,7 @@ contract RewardsDistributorTest is Test {
             REWARDS_HOLDER,
             newRewardsHolder
         );
-        rewardsDistributor.setMerkleRewardsHolder(newRewardsHolder);
+        rewardsDistributor.setRewardsHolder(newRewardsHolder);
         assertEq(rewardsDistributor.rewardsHolder(), newRewardsHolder);
     }
 
