@@ -12,10 +12,10 @@ contract RewardsDistributorScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        // for Sepolia
-        address owner = msg.sender;
-        address token = 0x46abDF5aD1726ba700794539C3dB8fE591854729;
-        address rewardsHolder = msg.sender;
+        // for mainnet
+        address owner = 0xe0AfAd35ADA675959E6836D38e7c9F4A207CFd27;
+        address token = 0xCdF7028ceAB81fA0C6971208e83fa7872994beE5;
+        address rewardsHolder = 0xe0AfAd35ADA675959E6836D38e7c9F4A207CFd27;
 
         rewardsDistributor = new RewardsDistributor(
             owner,
