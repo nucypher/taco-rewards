@@ -1,0 +1,18 @@
+sources:
+  - name: development-threshold-subgraph
+    handler:
+      graphql:
+        endpoint: https://subgraph.satsuma-prod.com/735cd3ac7b23/nucypher-ops/staking-subgraph-mainnet/api
+    transforms:
+      - autoPagination:
+          validateSchema: true
+  - name: threshold-staking-polygon
+    handler:
+      graphql:
+        endpoint: https://api.studio.thegraph.com/query/24143/threshold-staking-polygon/0.1.1
+    transforms:
+      - autoPagination:
+          validateSchema: true
+documents:
+  - ./scripts/utils/graphql/TacoOperators.graphql
+  - ./scripts/utils/graphql/TacoAuthHistory.graphql

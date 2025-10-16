@@ -2,9 +2,8 @@
   "name": "taco-rewards",
   "version": "1.0.0",
   "description": "TACo staking rewards distribution mechanism, based on the Merkle tree algorithm.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-graphclient": "graphclient build --fileType json"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +14,10 @@
     "prettier": "^3.6.2"
   },
   "dependencies": {
-    "commander": "^14.0.1"
+    "bignumber.js": "^9.3.1",
+    "commander": "^14.0.1",
+    "ethers": "^5.8.0",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.6.0"
   }
 }
