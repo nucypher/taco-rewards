@@ -12,3 +12,9 @@ docs/
 
 # Dotenv file
 .env
+
+# Python
+.python-version
+
+# AI
+.claude
