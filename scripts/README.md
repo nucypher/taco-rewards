@@ -24,7 +24,9 @@ node scripts/new_rewards_dist.js -s 2025-09-01 -e 2025-10-01
 
 Requires a `.env` file with necessary configuration:
 
--
+```dotenv
+POLYGON_RPC_URL=https://polygon-mainnet.infura.io/v3/<INFURA_KEY>
+```
 
 ## Development
 
