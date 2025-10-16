@@ -42,5 +42,5 @@ folder.
 Every time the subgraph queries are modified, these must be recompiled:
 
 ```bash
-npm run build-client
+npm run build-graphclient
 ```
