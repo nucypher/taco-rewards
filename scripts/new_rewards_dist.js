@@ -1,147 +1,122 @@
-// Script that generates a new Merkle Distribution for rewards and outputs the
-// data to JSON files
-// Use: node src/scripts/gen_merkle_dist.js
-
-require("dotenv").config()
-const fs = require("fs")
-const MerkleDist = require("./utils/merkle_dist.js")
+require("dotenv").config();
+const fs = require("fs");
+const { program } = require("commander");
 const {
   getPotentialRewards,
-  getHeartbeatNodesFailures,
   setBetaStakerRewardsToZero,
+  getHeartbeatNodesFailures,
   applyPenalties,
-} = require("./utils/taco-rewards.js")
-
-// The following parameters must be modified for each distribution
-const tacoWeight = 0.25
-const startTime = new Date("2025-08-01T00:00:00+00:00").getTime() / 1000
-const endTime = new Date("2025-09-01T00:00:00+00:00").getTime() / 1000
-const lastDistribution = "2025-08-01"
+} = require("./utils/taco_rewards.js");
+const MerkleDist = require("./utils/merkle_tree.js");
 
 async function main() {
-  const endDate = new Date(endTime * 1000).toISOString().slice(0, 10)
-  const distPath = `distributions/${endDate}`
-  const tacoRewardsDetailsPath = `${distPath}/TACoRewardsDetails`
-  const heartbeatRitualsPath = "heartbeat-rituals.json"
-  const lastDistPath = `distributions/${lastDistribution}`
-  const distributionsFilePath = "distributions/distributions.json"
+  program
+    .name("new_rewards_dist")
+    .description("Generates a new TACo rewards distribution")
+    .requiredOption(
+      "-s, --start-date <date>",
+      "Start date of the rewards period (YYYY-MM-DD) UTC"
+    )
+    .requiredOption(
+      "-e, --end-date <date>",
+      "End date of the rewards period (YYYY-MM-DD) UTC"
+    )
+    .requiredOption(
+      "-r, --rituals-path <path>",
+      "Path to the heartbeat rituals JSON file"
+    );
 
-  let earnedTACoRewards = {}
+  program.parse();
+  const cliOptions = program.opts();
 
-  // TACo rewards calculation
-  if (tacoWeight > 0) {
-    // Create the folder for TACo rewards details
-    try {
-      fs.mkdirSync(tacoRewardsDetailsPath, { recursive: true })
-    } catch (err) {
-      console.error(err)
-      return
+  const heartbeatRitualsPath = cliOptions.ritualsPath;
+  const startDate = `${cliOptions.startDate}T00:00:00+00:00`;
+  const endDate = `${cliOptions.endDate}T00:00:00+00:00`;
+  const startTimestamp = Math.floor(new Date(startDate).getTime() / 1000);
+  const endTimestamp = Math.floor(new Date(endDate).getTime() / 1000);
+
+  console.log("Rewards period start date:", startDate, startTimestamp);
+  console.log("Rewards period end date:", endDate, endTimestamp);
+
+  // Calculate the potential TACo rewards (i.e. before applying penalizations)
+  const potentialTACoRewards = await getPotentialRewards(
+    startTimestamp,
+    endTimestamp
+  );
+
+  // Make sure Beta Stakers are not receiving rewards
+  const noBetaStakerRewards = setBetaStakerRewardsToZero(potentialTACoRewards);
+
+  console.log("✅ Potential TACo rewards calculated");
+
+  // Filter the stakes that didnt earn any rewards
+  const filteredPotentialTACoRewards = {};
+  Object.keys(noBetaStakerRewards).forEach((stProv) => {
+    if (noBetaStakerRewards[stProv].amount !== "0") {
+      filteredPotentialTACoRewards[stProv] = {
+        amount: noBetaStakerRewards[stProv].amount,
+        beneficiary: noBetaStakerRewards[stProv].beneficiary,
+      };
     }
+  });
 
-    // Potential TACo rewards before applying penalties
-    console.log("Calculating potential TACo rewards...")
-    let potentialTACoRewards = await getPotentialRewards(
-      startTime,
-      endTime,
-      tacoWeight
-    )
+  console.log("Calculating penalizations based on DKG heartbeats...");
 
-    // Make sure that TACo rewards for Beta Stakers are set to zero
-    potentialTACoRewards = setBetaStakerRewardsToZero(potentialTACoRewards)
+  // Read and copy the list of DKG heartbeats for this distribution
+  const heartbeatRituals = readDataFromFile(heartbeatRitualsPath);
 
-    writeDataToFile(
-      `${tacoRewardsDetailsPath}/PotentialRewards.json`,
-      potentialTACoRewards
-    )
-
-    // Read and copy the list of DKG heartbeats for this distribution
-    const heartbeatRituals = readDataFromFile(heartbeatRitualsPath)
-    writeDataToFile(
-      `${tacoRewardsDetailsPath}/HeartbeatRituals.json`,
-      heartbeatRituals
-    )
-
-    // Get the list of nodes that didn't complete some DKG ritual
-    console.log("Retrieving node failures on DKG heartbeats...")
-    let failedHeartbeats
-    try {
-      failedHeartbeats = await getHeartbeatNodesFailures(heartbeatRituals)
-    } catch (err) {
-      console.error("Error in TACo penalty calculation:", err)
-      return
-    }
-    writeDataToFile(
-      `${tacoRewardsDetailsPath}/NodesFailures.json`,
-      failedHeartbeats
-    )
-
-    // Apply penalties to TACo rewards
-    console.log("Applying penalties to TACo rewards...")
-    earnedTACoRewards = applyPenalties(potentialTACoRewards, failedHeartbeats)
-    writeDataToFile(
-      `${tacoRewardsDetailsPath}/EarnedRewards.json`,
-      earnedTACoRewards
-    )
+  try {
+    failedHeartbeats = await getHeartbeatNodesFailures(heartbeatRituals);
+  } catch (err) {
+    console.error("Error in TACo penalty calculation:", err);
+    return;
   }
 
-  // Add rewards earned to accumulated totals
-  // Bonus rewards remain the same
-  const bonusRewards = readDataFromFile(
-    `${lastDistPath}/MerkleInputBonusRewards.json`
-  )
-  writeDataToFile(`${distPath}/MerkleInputBonusRewards.json`, bonusRewards)
+  // Apply penalties to TACo rewards
+  console.log("Applying penalties to TACo rewards...");
+  const { earnedTACoRewards, tacoPenalties } = applyPenalties(
+    filteredPotentialTACoRewards,
+    failedHeartbeats
+  );
 
-  // tBTCv2 rewards remain the same
-  const tbtcv2Rewards = readDataFromFile(
-    `${lastDistPath}/MerkleInputTbtcv2Rewards.json`
-  )
-  writeDataToFile(`${distPath}/MerkleInputTbtcv2Rewards.json`, tbtcv2Rewards)
+  const claimsData = {};
+  Object.keys(earnedTACoRewards).forEach((stProv) => {
+    claimsData[stProv] = {
+      beneficiary: earnedTACoRewards[stProv].beneficiary,
+      amount: earnedTACoRewards[stProv].amount,
+      failedHeartbeats: failedHeartbeats[stProv] || [],
+      penalty: tacoPenalties[stProv] ? tacoPenalties[stProv] : "0",
+    };
+  });
 
-  // Combine the accumulated TACo rewards with the new rewards
-  const prevAccumulatedRewards = readDataFromFile(
-    `${lastDistPath}/MerkleInputTACoRewards.json`
-  )
-
-  const tacoRewards = MerkleDist.combineMerkleInputs(
-    prevAccumulatedRewards,
-    earnedTACoRewards
-  )
-
-  writeDataToFile(`${distPath}/MerkleInputTACoRewards.json`, tacoRewards)
-
-  let merkleInput = MerkleDist.combineMerkleInputs(bonusRewards, tbtcv2Rewards)
-  merkleInput = MerkleDist.combineMerkleInputs(merkleInput, tacoRewards)
-  writeDataToFile(`${distPath}/MerkleInputTotalRewards.json`, merkleInput)
-
-  // Generate the Merkle distribution
-  const merkleDist = MerkleDist.genMerkleDist(merkleInput)
-  writeDataToFile(`${distPath}/MerkleDist.json`, merkleDist)
-
-  // Write the total amount in distributions JSON file
-  const distributions = readDataFromFile(distributionsFilePath)
-  distributions.LatestCumulativeAmount = merkleDist.totalAmount
-  distributions.CumulativeAmountByDistribution[endDate] = merkleDist.totalAmount
-  writeDataToFile(distributionsFilePath, distributions)
+  // Generate the Merkle distribution output
+  const merkleDistribution = MerkleDist.genMerkleDist(claimsData);
+  merkleDistribution.heartbeatRituals = { ...heartbeatRituals };
+  writeDataToFile(
+    `distributions/${cliOptions.endDate}.json`,
+    merkleDistribution
+  );
+  writeDataToFile("distributions/latest.json", merkleDistribution);
 }
 
 function readDataFromFile(path) {
   // Read the list of heartbeat rituals
   try {
-    return JSON.parse(fs.readFileSync(path))
+    return JSON.parse(fs.readFileSync(path));
   } catch (err) {
-    console.error(`Error reading data from file: ${path}`)
-    console.error(err)
-    return
+    console.error(`Error reading data from file: ${path}`);
+    console.error(err);
+    return;
   }
 }
 
 function writeDataToFile(path, data) {
   try {
-    fs.writeFileSync(path, JSON.stringify(data, null, 4))
+    fs.writeFileSync(path, JSON.stringify(data, null, 4));
   } catch (err) {
-    console.error(`Error writing data to file: ${path}`)
-    console.error(err)
+    console.error(`Error writing data to file: ${path}`);
+    console.error(err);
   }
 }
 
-main()
+main();
