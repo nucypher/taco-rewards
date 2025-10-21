@@ -13,7 +13,7 @@ function genMerkleDist(claimsData) {
     (stakingProvider, i) =>
       stakingProvider +
       data[i].beneficiary.substr(2) +
-      BigNumber(data[i].amount).toString(16).padStart(64, "0")
+      BigNumber(data[i].accumulatedAmount).toString(16).padStart(64, "0")
   );
 
   const tree = new MerkleTree(elements, keccak256, {
@@ -25,8 +25,13 @@ function genMerkleDist(claimsData) {
   const leaves = tree.getHexLeaves();
   const proofs = leaves.map(tree.getHexProof, tree);
 
-  const totalAmount = data
-    .map((claim) => BigNumber(claim.amount))
+  const accumulatedAmount = data
+    .map((claim) => BigNumber(claim.accumulatedAmount))
+    .reduce((a, b) => a.plus(b))
+    .toFixed();
+
+  const thisDistributionAmount = data
+    .map((claim) => BigNumber(claim.earnedThisDistribution))
     .reduce((a, b) => a.plus(b))
     .toFixed();
 
@@ -35,21 +40,23 @@ function genMerkleDist(claimsData) {
       keccak256(
         stakingProvider +
           data.beneficiary.substr(2) +
-          BigNumber(data.amount).toString(16).padStart(64, "0")
+          BigNumber(data.accumulatedAmount).toString(16).padStart(64, "0")
       )
     );
     return {
       stakingProvider: stakingProvider,
       beneficiary: data.beneficiary,
-      amount: data.amount,
-      penalty: data.penalty,
+      accumulatedAmount: data.accumulatedAmount,
+      earnedThisDistribution: data.earnedThisDistribution,
+      penaltyThisDistribution: data.penaltyThisDistribution,
       failedHeartbeats: data.failedHeartbeats,
       proof: proofs[leaves.indexOf(leaf)],
     };
   });
 
   const dist = {
-    totalAmount: totalAmount,
+    accumulatedAmount,
+    thisDistributionAmount,
     merkleRoot: root,
     claims: claims.reduce(
       (
@@ -57,16 +64,18 @@ function genMerkleDist(claimsData) {
         {
           stakingProvider,
           beneficiary,
-          amount,
-          penalty,
+          accumulatedAmount,
+          earnedThisDistribution,
+          penaltyThisDistribution,
           failedHeartbeats,
           proof,
         }
       ) => {
         a[stakingProvider] = {
           beneficiary,
-          amount,
-          penalty,
+          accumulatedAmount,
+          earnedThisDistribution,
+          penaltyThisDistribution,
           failedHeartbeats,
           proof,
         };
