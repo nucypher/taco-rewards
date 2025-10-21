@@ -1,6 +1,7 @@
 require("dotenv").config();
 const fs = require("fs");
 const { program } = require("commander");
+const BigNumber = require("bignumber.js");
 const {
   getPotentialRewards,
   setBetaStakerRewardsToZero,
@@ -83,14 +84,51 @@ async function main() {
   Object.keys(earnedTACoRewards).forEach((stProv) => {
     claimsData[stProv] = {
       beneficiary: earnedTACoRewards[stProv].beneficiary,
-      amount: earnedTACoRewards[stProv].amount,
+      accumulatedAmount: earnedTACoRewards[stProv].amount, // to be updated below
+      earnedThisDistribution: earnedTACoRewards[stProv].amount,
       failedHeartbeats: failedHeartbeats[stProv] || [],
-      penalty: tacoPenalties[stProv] ? tacoPenalties[stProv] : "0",
+      penaltyThisDistribution: tacoPenalties[stProv]
+        ? tacoPenalties[stProv]
+        : "0",
     };
   });
 
+  // The reward amounts on the Merkle tree are those accumulated since the first
+  // distribution. Add the rewards earned now to the previous amounts
+  const previousMerkleDist = readDataFromFile("distributions/latest.json");
+  const combinedClaimsData = {};
+  Object.keys(previousMerkleDist.claims).forEach((stProv) => {
+    // Update the claim for this stake
+    if (claimsData[stProv]) {
+      combinedClaimsData[stProv] = {
+        ...claimsData[stProv],
+        accumulatedAmount: BigNumber(
+          previousMerkleDist.claims[stProv].accumulatedAmount
+        )
+          .plus(BigNumber(claimsData[stProv].earnedThisDistribution))
+          .toFixed(0),
+      };
+
+      // If no new rewards were earned by this claim, keep the previous claim
+    } else {
+      combinedClaimsData[stProv] = { ...previousMerkleDist.claims[stProv] };
+    }
+  });
+
+  const claimsDataStProvs = Object.keys(claimsData);
+  const previousMerkleDistStProvs = Object.keys(previousMerkleDist.claims);
+
+  // Check if there are new stakes with rewards in this distribution
+  const newClaims = claimsDataStProvs.filter(
+    (stProv) => !previousMerkleDistStProvs.includes(stProv)
+  );
+  newClaims.forEach((stProv) => {
+    console.log(`⚠️ New stake with rewards: ${stProv}`);
+    combinedClaimsData[stProv] = { ...claimsData[stProv] };
+  });
+
   // Generate the Merkle distribution output
-  const merkleDistribution = MerkleDist.genMerkleDist(claimsData);
+  const merkleDistribution = MerkleDist.genMerkleDist(combinedClaimsData);
   merkleDistribution.heartbeatRituals = { ...heartbeatRituals };
   writeDataToFile(
     `distributions/${cliOptions.endDate}.json`,
@@ -106,7 +144,7 @@ function readDataFromFile(path) {
   } catch (err) {
     console.error(`Error reading data from file: ${path}`);
     console.error(err);
-    return;
+    throw err;
   }
 }
 
@@ -116,6 +154,7 @@ function writeDataToFile(path, data) {
   } catch (err) {
     console.error(`Error writing data to file: ${path}`);
     console.error(err);
+    throw err;
   }
 }
 
