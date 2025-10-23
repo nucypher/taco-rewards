@@ -6,7 +6,7 @@ const {
   getPotentialRewards,
   setBetaStakerRewardsToZero,
   getHeartbeatNodesFailures,
-  applyPenalties,
+  calculatePenalties,
 } = require("./utils/taco_rewards.js");
 const MerkleDist = require("./utils/merkle_tree.js");
 
@@ -75,7 +75,7 @@ async function main() {
 
   // Apply penalties to TACo rewards
   console.log("Applying penalties to TACo rewards...");
-  const { earnedTACoRewards, tacoPenalties } = applyPenalties(
+  const { earnedTACoRewards, tacoPenalties } = calculatePenalties(
     filteredPotentialTACoRewards,
     failedHeartbeats
   );
