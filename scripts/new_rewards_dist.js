@@ -111,7 +111,10 @@ async function main() {
 
       // If no new rewards were earned by this claim, keep the previous claim
     } else {
-      combinedClaimsData[stProv] = { ...previousMerkleDist.claims[stProv] };
+      combinedClaimsData[stProv] = {
+        ...previousMerkleDist.claims[stProv],
+        earnedThisDistribution: "0",
+      };
     }
   });
 
