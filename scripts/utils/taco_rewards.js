@@ -373,9 +373,9 @@ async function getHeartbeatNodesFailures(heartbeatRituals) {
 // Return the TACo rewards after applying the penalties and the amount of
 // penalties applied to every stake
 //
-function applyPenalties(potentialRewards, failedHeartbeats) {
+function calculatePenalties(potentialRewards, failedHeartbeats) {
   // Copy the object to avoid modifying the original
-  const earnedTACoRewards = { ...potentialRewards };
+  const earnedTACoRewards = JSON.parse(JSON.stringify(potentialRewards));
   const tacoPenalties = {};
 
   Object.keys(failedHeartbeats).forEach((stProv) => {
@@ -403,9 +403,12 @@ function applyPenalties(potentialRewards, failedHeartbeats) {
       earnedTACoRewards[stProv].amount = BigNumber(0).toFixed(0);
     }
 
-    tacoPenalties[stProv] = BigNumber(potentialRewards[stProv].amount)
+    const penalty = BigNumber(potentialRewards[stProv].amount)
       .minus(BigNumber(earnedTACoRewards[stProv].amount))
       .toFixed(0);
+    if (BigNumber(penalty).gt(0)) {
+      tacoPenalties[stProv] = penalty;
+    }
   });
 
   return { earnedTACoRewards, tacoPenalties };
@@ -415,5 +418,5 @@ module.exports = {
   getPotentialRewards,
   setBetaStakerRewardsToZero,
   getHeartbeatNodesFailures,
-  applyPenalties,
+  calculatePenalties,
 };
