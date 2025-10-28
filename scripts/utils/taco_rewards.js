@@ -407,9 +407,7 @@ function calculatePenalties(potentialRewards, failedHeartbeats) {
       .minus(BigNumber(earnedTACoRewards[stProv].amount))
       .toFixed(0);
     if (BigNumber(penalty).gt(0)) {
-      tacoPenalties[stProv] = BigNumber(potentialRewards[stProv].amount)
-        .minus(BigNumber(earnedTACoRewards[stProv].amount))
-        .toFixed(0);
+      tacoPenalties[stProv] = penalty;
     }
   });
 
