@@ -80,7 +80,7 @@ async function main() {
       .connect(claimer)
       .batchClaim(dist.merkleRoot, batchClaim);
     const txReceipt = await tx.wait();
-    console.log("✅ Claim transaction sent!");
+    console.log("✅ Claim transaction confirmed!");
     console.log(`Claimer: ${txReceipt.from}`);
     console.log(`Tx: https://etherscan.io/tx/${txReceipt.transactionHash}/`);
   } catch (error) {
