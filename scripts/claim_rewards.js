@@ -7,7 +7,7 @@ async function main() {
   const LAST_DIST_PATH = "./distributions/latest.json";
   const DISTRIBUTOR_ADDRESS = "0xA08AadA7c59E4A1D4A858fcfA299673d2f6De0c3";
   const BATCH_CLAIM_ABI =
-    '[{"inputs":[{"internalType":"bytes32","name":"expectedMerkleRoot","type":"bytes32"},{"components":[{"internalType":"address","name":"stakingProvider","type":"address"},{"internalType":"address","name":"beneficiary","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"bytes32[]","name":"proof","type":"bytes32[]"}],"internalType":"struct RewardsDistributor.Claim[]","name":"claims","type":"tuple[]"}],"name":"batchClaim","outputs":[],"stateMutability":"nonpayable","type":"function"}]';
+    '[{"inputs":[{"internalType":"address","name":"_initialOwner","type":"address"},{"internalType":"address","name":"_token","type":"address"},{"internalType":"address","name":"_rewardsHolder","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"OwnableInvalidOwner","type":"error"},{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"OwnableUnauthorizedAccount","type":"error"},{"inputs":[{"internalType":"address","name":"token","type":"address"}],"name":"SafeERC20FailedOperation","type":"error"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"stakingProvider","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"},{"indexed":false,"internalType":"address","name":"beneficiary","type":"address"},{"indexed":false,"internalType":"bytes32","name":"merkleRoot","type":"bytes32"}],"name":"Claimed","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"bytes32","name":"oldMerkleRoot","type":"bytes32"},{"indexed":false,"internalType":"bytes32","name":"newMerkleRoot","type":"bytes32"}],"name":"MerkleRootUpdated","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"oldRewardsHolder","type":"address"},{"indexed":false,"internalType":"address","name":"newRewardsHolder","type":"address"}],"name":"RewardsHolderUpdated","type":"event"},{"inputs":[],"name":"TOKEN","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"expectedMerkleRoot","type":"bytes32"},{"components":[{"internalType":"address","name":"stakingProvider","type":"address"},{"internalType":"address","name":"beneficiary","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"bytes32[]","name":"proof","type":"bytes32[]"}],"internalType":"struct RewardsDistributor.Claim[]","name":"claims","type":"tuple[]"}],"name":"batchClaim","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"stakingProvider","type":"address"},{"internalType":"address","name":"beneficiary","type":"address"},{"internalType":"uint256","name":"cumulativeAmount","type":"uint256"},{"internalType":"bytes32","name":"expectedMerkleRoot","type":"bytes32"},{"internalType":"bytes32[]","name":"merkleProof","type":"bytes32[]"}],"name":"claim","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"cumulativeClaimed","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"merkleRoot","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"rewardsHolder","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"newMerkleRoot","type":"bytes32"}],"name":"setMerkleRoot","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newRewardsHolder","type":"address"}],"name":"setRewardsHolder","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"}]';
   const ethereumRpcUrl = process.env.ETHEREUM_RPC_URL;
   const claimerPrivateKey = process.env.CLAIMER_PRIVATE_KEY;
 
@@ -37,14 +37,23 @@ async function main() {
   );
 
   // Build the claim transaction
-  const batchClaim = Object.keys(dist.claims).map((stakingProvider) => {
-    return {
-      stakingProvider: stakingProvider,
-      beneficiary: dist.claims[stakingProvider].beneficiary,
-      amount: dist.claims[stakingProvider].accumulatedAmount,
-      proof: dist.claims[stakingProvider].proof,
-    };
-  });
+  const batchClaim = [];
+  for (const stakingProvider of Object.keys(dist.claims)) {
+    // Check if the stake has something to claim
+    const cumulativeClaimed = await contract.cumulativeClaimed(stakingProvider);
+    const cumulativeAmount = ethers.BigNumber.from(
+      dist.claims[stakingProvider].accumulatedAmount
+    );
+
+    if (cumulativeAmount.gt(cumulativeClaimed)) {
+      batchClaim.push({
+        stakingProvider: stakingProvider,
+        beneficiary: dist.claims[stakingProvider].beneficiary,
+        amount: dist.claims[stakingProvider].accumulatedAmount,
+        proof: dist.claims[stakingProvider].proof,
+      });
+    }
+  }
 
   // Display confirmation dialog
   console.log("\n=== Transaction Confirmation ===");
