@@ -66,6 +66,7 @@ async function main() {
   // Read and copy the list of DKG heartbeats for this distribution
   const heartbeatRituals = readDataFromFile(heartbeatRitualsPath);
 
+  let failedHeartbeats;
   try {
     failedHeartbeats = await getHeartbeatNodesFailures(heartbeatRituals);
   } catch (err) {
