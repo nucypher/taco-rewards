@@ -34,7 +34,7 @@ POLYGON_RPC_URL=https://polygon-mainnet.infura.io/v3/<INFURA_KEY>
 
 Some script uses [subgraphs](https://thegraph.com/explorer) for querying staking
 data and calculating the appropriate rewards. These subgraphs are queried using
-(`graph-client`)[https://thegraph.com/docs/en/querying/graph-client/README/]
+[`graph-client`](https://thegraph.com/docs/en/querying/graph-client/README/)
 since this library supports auto-pagination, retry, fallback, etc.
 
 Modification or addition of new subgraphs must be done in `.graphclientrc.yml`.
