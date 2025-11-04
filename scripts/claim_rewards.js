@@ -82,7 +82,7 @@ async function main() {
     const txReceipt = await tx.wait();
     console.log("✅ Claim transaction confirmed!");
     console.log(`Claimer: ${txReceipt.from}`);
-    console.log(`Tx: https://etherscan.io/tx/${txReceipt.transactionHash}/`);
+    console.log(`Tx: https://etherscan.io/tx/${txReceipt.transactionHash}`);
   } catch (error) {
     console.log("Error claiming the rewards:");
     console.log(error.reason || error);
