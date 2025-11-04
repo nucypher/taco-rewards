@@ -238,7 +238,7 @@ async function getPotentialRewards(startPeriodTimestamp, endPeriodTimestamp) {
 
     // sorting the events
     const sortedEvents = filteredEvents.sort(
-      (a, b) => Number(a.timestamp) < Number(b.timestamp)
+      (a, b) => Number(a.timestamp) - Number(b.timestamp)
     );
 
     const epochs = [];
