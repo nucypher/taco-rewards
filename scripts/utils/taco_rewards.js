@@ -193,7 +193,7 @@ async function getPotentialRewards(startPeriodTimestamp, endPeriodTimestamp) {
   // Filter those stakes that have not a confirmed operator and add the
   // confirmed operator timestamp to every history event and it also adds
   // which of these two timestamp is the greater
-  Object.keys(opsConfirmed).map((stProv) => {
+  Object.keys(opsConfirmed).forEach((stProv) => {
     if (tacoAuthHistories[stProv]) {
       confirmedAuthHistories[stProv] = tacoAuthHistories[stProv].map(
         (historyEvent) => {
@@ -210,7 +210,7 @@ async function getPotentialRewards(startPeriodTimestamp, endPeriodTimestamp) {
   });
 
   const rewards = {};
-  Object.keys(confirmedAuthHistories).map((stProv) => {
+  Object.keys(confirmedAuthHistories).forEach((stProv) => {
     // Take the first event: this is, the event whose timestamp or
     // opConfirmedTimestamp (the oldest of both) is closer to (and preferably
     // lower than) start period time
@@ -307,7 +307,7 @@ function setBetaStakerRewardsToZero(potentialRewards) {
   // Copy the object to avoid modifying the original
   const tacoRewards = JSON.parse(JSON.stringify(potentialRewards));
 
-  BETA_STAKERS.map((stProv) => {
+  BETA_STAKERS.forEach((stProv) => {
     if (tacoRewards[stProv]) {
       delete tacoRewards[stProv];
     }
