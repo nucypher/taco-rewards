@@ -18,7 +18,15 @@ async function main() {
     process.exit(1);
   }
 
-  const dist = JSON.parse(fs.readFileSync(LAST_DIST_PATH));
+  let dist;
+  try {
+    dist = JSON.parse(fs.readFileSync(LAST_DIST_PATH));
+  } catch (error) {
+    console.error(
+      `Error: Failed to read or parse distribution file at ${LAST_DIST_PATH}: ${error.message}`
+    );
+    process.exit(1);
+  }
   const provider = new ethers.providers.JsonRpcProvider(ethereumRpcUrl);
   const claimer = new ethers.Wallet(claimerPrivateKey, provider);
   const batchClaimAbi = JSON.parse(BATCH_CLAIM_ABI);
