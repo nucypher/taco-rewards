@@ -47,7 +47,7 @@ async function main() {
 
     if (cumulativeAmount.gt(cumulativeClaimed)) {
       batchClaim.push({
-        stakingProvider: stakingProvider,
+        stakingProvider,
         beneficiary: dist.claims[stakingProvider].beneficiary,
         amount: dist.claims[stakingProvider].accumulatedAmount,
         proof: dist.claims[stakingProvider].proof,
