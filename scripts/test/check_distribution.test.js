@@ -153,7 +153,7 @@ describe("Checking last TACo rewards distribution", () => {
       const merkleRoot = latestDist.merkleRoot;
       const claims = latestDist.claims;
 
-      Object.keys(claims).map((stProv) => {
+      Object.keys(claims).forEach((stProv) => {
         const beneficiary = claims[stProv].beneficiary;
         const amount = claims[stProv].accumulatedAmount;
         const proof = claims[stProv].proof;
@@ -172,7 +172,7 @@ describe("Checking last TACo rewards distribution", () => {
 
   describe("Checking known stakes", () => {
     it("should known stakes receive expected rewards", () => {
-      Object.keys(KNOWN_STAKES).map((stProv) => {
+      Object.keys(KNOWN_STAKES).forEach((stProv) => {
         const periodDuration = (lastDistDate - secondToLastDistDate) / 1000;
         const earnedAmount = BigNumber(
           latestDist.claims[stProv].earnedThisDistribution
@@ -196,7 +196,7 @@ describe("Checking last TACo rewards distribution", () => {
     });
 
     it("should beta stakers not receive rewards", () => {
-      BETA_STAKERS.map((stProv) => {
+      BETA_STAKERS.forEach((stProv) => {
         expect(latestDist.claims[stProv]).to.be.undefined;
       });
     });
@@ -204,7 +204,7 @@ describe("Checking last TACo rewards distribution", () => {
 
   describe("Checking penalizations", () => {
     it("should infractors be penalized", () => {
-      Object.keys(latestDist.claims).map((stProv) => {
+      Object.keys(latestDist.claims).forEach((stProv) => {
         const failures = latestDist.claims[stProv].failedHeartbeats.length;
         const earnedThisDistribution =
           latestDist.claims[stProv].earnedThisDistribution;
@@ -258,7 +258,7 @@ describe("Checking last TACo rewards distribution", () => {
             .div(31536000)
             .decimalPlaces(0);
 
-          Object.keys(latestDist.claims).map((stProv) => {
+          Object.keys(latestDist.claims).forEach((stProv) => {
             const potentialEarning = BigNumber(
               latestDist.claims[stProv].earnedThisDistribution
             ).plus(
