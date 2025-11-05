@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "TACo staking rewards distribution mechanism, based on the Merkle tree algorithm.",
   "scripts": {
-    "build-graphclient": "graphclient build --fileType json"
+    "build-graphclient": "graphclient build --fileType json",
+    "test-taco-rewards": "mocha scripts/test/taco_rewards.test.js",
+    "check-distribution": "mocha scripts/test/check_distribution.test.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@graphprotocol/client-cli": "^3.0.7",
+    "chai": "^6.2.0",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
+    "mocha": "^11.7.4",
     "prettier": "^3.6.2"
   },
   "dependencies": {
