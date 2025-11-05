@@ -28,6 +28,35 @@ Requires a `.env` file with necessary configuration:
 POLYGON_RPC_URL=https://polygon-mainnet.infura.io/v3/<INFURA_KEY>
 ```
 
+### claim_rewards.js
+
+A script to claim TACo rewards for all stakes.
+
+The script calls the `batchClaim` function on the
+[TACo Rewards distributor contract](https://etherscan.io/address/0xa08aada7c59e4a1d4a858fcfa299673d2f6de0c3)
+and passes the data for every stake. When executed, the TACo rewards earned by
+each stake will be transferred to its corresponding beneficiary address.
+
+This transaction can be executed by any Ethereum address.
+
+#### Usage
+
+```bash
+node scripts/claim_rewards.js
+```
+
+#### Environment variables
+
+Requires a `.env` file with necessary configuration:
+
+```dotenv
+ETHEREUM_RPC_URL=https://mainnet.infura.io/v3/<INFURA_KEY>
+CLAIMER_PRIVATE_KEY=<PRIVATE_KEY>
+```
+
+The claimer address is the one that will execute the onchain transaction. Any
+EOA with enough ETH for gas can be set here.
+
 ## Development
 
 ### Subgraphs
