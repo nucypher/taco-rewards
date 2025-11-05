@@ -6,13 +6,7 @@ This repository contains:
 
 - The distributions released.
 - The Rewards distributor smartcontract.
-- The scripts to:
-  - Initiate DKG heartbeats.
-  - Evaluate heartbeats.
-  - Calculate penalizations.
-  - Calculate rewards.
-  - Generate new distribution.
-  - Claim the rewards on behalf of stakers.
+- Script to generate a new rewards distribution.
 
 ## Deployed Contract
 
