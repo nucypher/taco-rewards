@@ -1,6 +1,7 @@
 require("dotenv").config();
 const fs = require("fs");
 const readline = require("readline");
+const BigNumber = require("bignumber.js");
 const { ethers } = require("ethers");
 
 async function main() {
@@ -40,12 +41,14 @@ async function main() {
   const batchClaim = [];
   for (const stakingProvider of Object.keys(dist.claims)) {
     // Check if the stake has something to claim
-    const cumulativeClaimed = await contract.cumulativeClaimed(stakingProvider);
-    const cumulativeAmount = ethers.BigNumber.from(
+    const cumulativeClaimed = BigNumber(
+      (await contract.cumulativeClaimed(stakingProvider)).toString()
+    );
+    const accumulatedAmount = BigNumber(
       dist.claims[stakingProvider].accumulatedAmount
     );
 
-    if (cumulativeAmount.gt(cumulativeClaimed)) {
+    if (accumulatedAmount.gt(cumulativeClaimed)) {
       batchClaim.push({
         stakingProvider,
         beneficiary: dist.claims[stakingProvider].beneficiary,
@@ -55,12 +58,21 @@ async function main() {
     }
   }
 
+  const thisDistAmountRounded = BigNumber(dist.thisDistributionAmount)
+    .div(1e18)
+    .toFixed(0);
+
   // Display confirmation dialog
   console.log("\n=== Transaction Confirmation ===");
   console.log(`Claimer Address: ${claimer.address}`);
   console.log(`Merkle Root: ${dist.merkleRoot}`);
   console.log(`Number of Claims: ${batchClaim.length}`);
-  console.log(`Total Amount to Claim: ${dist.thisDistributionAmount}`);
+  console.log(
+    `Total Amount to Claim (wei units): ${dist.thisDistributionAmount} T`
+  );
+  console.log(
+    `Total Amount to Claim (ether units): ${thisDistAmountRounded} T`
+  );
   console.log("================================\n");
 
   const rl = readline.createInterface({
