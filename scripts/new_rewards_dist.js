@@ -4,7 +4,7 @@ const { program } = require("commander");
 const BigNumber = require("bignumber.js");
 const {
   getPotentialRewards,
-  setBetaStakerRewardsToZero,
+  filterEligibleRewards,
   getHeartbeatNodesFailures,
   calculatePenalties,
 } = require("./utils/taco_rewards.js");
@@ -46,17 +46,17 @@ async function main() {
   );
 
   // Make sure Beta Stakers are not receiving rewards
-  const noBetaStakerRewards = setBetaStakerRewardsToZero(potentialTACoRewards);
+  const eligibleRewards = filterEligibleRewards(potentialTACoRewards);
 
   console.log("✅ Potential TACo rewards calculated");
 
   // Filter the stakes that didnt earn any rewards
   const filteredPotentialTACoRewards = {};
-  Object.keys(noBetaStakerRewards).forEach((stProv) => {
-    if (noBetaStakerRewards[stProv].amount !== "0") {
+  Object.keys(eligibleRewards).forEach((stProv) => {
+    if (eligibleRewards[stProv].amount !== "0") {
       filteredPotentialTACoRewards[stProv] = {
-        amount: noBetaStakerRewards[stProv].amount,
-        beneficiary: noBetaStakerRewards[stProv].beneficiary,
+        amount: eligibleRewards[stProv].amount,
+        beneficiary: eligibleRewards[stProv].beneficiary,
       };
     }
   });
