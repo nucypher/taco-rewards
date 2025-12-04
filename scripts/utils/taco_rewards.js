@@ -49,6 +49,27 @@ const BETA_STAKERS = [
   "0xc1268db05E7bD38BD85b2C3Fef80F8968a2c933A",
 ];
 
+// Nodes that have requested exit and should not receive rewards
+// https://github.com/nucypher/sprints/issues/232#issuecomment-3334480599
+// Note that node `0xB99f5EbC5F61120515F67FbB9aB9693605FbaB06` is not included
+// here since this node did not actually request exit
+const NODES_REQUESTED_EXIT = [
+  "0x43df8c68a56249CC151dfb3a7E82cC7Fd624cF2a",
+  "0x095086293d57C5aD45f3f5243054AE199b005163",
+  "0x735dcf0cAf62cd1bC8E763e43Bb1aA11DBC56025",
+  "0x5838636dCDd92113998FEcbcDeDf5B0d8bEB4920",
+  "0xa7baCa5A92842689359Fb1782e75D6eFF59152e6",
+  "0x557C836714aFd04f796686b0a50528714B549C74",
+  "0xdA08C16C86B78cD56CB10FDc0370EFc549d8638B",
+  "0xa6E3A08FaE33898fC31C4f6C7a584827D809352D",
+  "0xB0C9F472b2066691Ab7FEE5b6702c28ab35888b2",
+  "0xE6C074228932F53C9E50928AD69DB760649A8C4d",
+  "0x02faA4286eF91247f8D09F36618D4694717F76bB",
+  "0x39A2D252769363D070a77fE3ad24b9954e1fB876",
+  "0x9Aa35dCE841A43693Cde23B86c394E1aEFb61c65",
+  "0x58d665406Cf0F890daD766389DF879E84cc55671",
+];
+
 const RITUAL_STATE = {
   NON_INITIATED: 0,
   DKG_AWAITING_TRANSCRIPTS: 1,
@@ -301,13 +322,22 @@ async function getPotentialRewards(startPeriodTimestamp, endPeriodTimestamp) {
 }
 
 //
-// Set the rewards for Beta Stakers to zero (TIP-092 and TIP-100)
+// Set the rewards for Beta Stakers to zero (TIP-092 and TIP-100) &
+// Set the rewards of the nodes that requested exit to zero: some nodes
+// requested exit from rituals 34 and 40. These should not earn rewards
 //
-function setBetaStakerRewardsToZero(potentialRewards) {
+//
+function filterEligibleRewards(potentialRewards) {
   // Copy the object to avoid modifying the original
   const tacoRewards = JSON.parse(JSON.stringify(potentialRewards));
 
   BETA_STAKERS.forEach((stProv) => {
+    if (tacoRewards[stProv]) {
+      delete tacoRewards[stProv];
+    }
+  });
+
+  NODES_REQUESTED_EXIT.forEach((stProv) => {
     if (tacoRewards[stProv]) {
       delete tacoRewards[stProv];
     }
@@ -416,7 +446,7 @@ function calculatePenalties(potentialRewards, failedHeartbeats) {
 
 module.exports = {
   getPotentialRewards,
-  setBetaStakerRewardsToZero,
+  filterEligibleRewards,
   getHeartbeatNodesFailures,
   calculatePenalties,
 };

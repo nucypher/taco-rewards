@@ -63,7 +63,7 @@ async function getMeshOptions() {
     const additionalTypeDefs = [];
     const developmentThresholdSubgraphHandler = new graphql_1.default({
         name: "development-threshold-subgraph",
-        config: { "endpoint": "https://subgraph.satsuma-prod.com/735cd3ac7b23/nucypher-ops/staking-subgraph-mainnet/api" },
+        config: { "endpoint": "https://api.goldsky.com/api/public/project_cmgzo6cgq00lc5np2dwaycfdl/subgraphs/threshold-staking/0.0.2/gn" },
         baseDir,
         cache,
         pubsub,
