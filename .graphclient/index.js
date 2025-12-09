@@ -117,7 +117,7 @@ async function getMeshOptions() {
         store: rootStore.child('stitchingMerger')
     });
     const documentHashMap = {
-        "8dc1e3abb3c749310b151d4a2872a2e0d6b4fc2411676d868e8d7bfd8b48577e": exports.TacoAuthHistoryDocument,
+        "7511a4473763e36203c27b8a330f44e4ff7e6a2809104949860ec10897b12919": exports.TacoAuthHistoryDocument,
         "a37918f83122f4fcf873612f69400c94d30f364de27d84f23feefa49a0eb5344": exports.TacoOperatorsDocument
     };
     additionalEnvelopPlugins.push((0, plugin_persisted_operations_1.usePersistedOperations)({
@@ -144,7 +144,7 @@ async function getMeshOptions() {
                         return (0, utils_4.printWithCache)(exports.TacoAuthHistoryDocument);
                     },
                     location: 'TacoAuthHistoryDocument.graphql',
-                    sha256Hash: '8dc1e3abb3c749310b151d4a2872a2e0d6b4fc2411676d868e8d7bfd8b48577e'
+                    sha256Hash: '7511a4473763e36203c27b8a330f44e4ff7e6a2809104949860ec10897b12919'
                 }, {
                     document: exports.TacoOperatorsDocument,
                     get rawSDL() {
@@ -209,6 +209,7 @@ exports.TacoAuthHistoryDocument = (0, utils_1.gql) `
     id
     timestamp
     amount
+    eventAmount
     blockNumber
     eventType
     appAuthorization {
