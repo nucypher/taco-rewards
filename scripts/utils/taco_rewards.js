@@ -188,6 +188,7 @@ async function getTACoAuthHistoryUntil(endTimestamp) {
     const stakingProvider = curr.appAuthorization.stake.id;
     const historyElem = {
       amount: curr.amount,
+      eventAmount: curr.eventAmount,
       timestamp: curr.timestamp,
       eventType: curr.eventType,
       beneficiary: curr.appAuthorization.stake.beneficiary,
@@ -232,76 +233,128 @@ async function getPotentialRewards(startPeriodTimestamp, endPeriodTimestamp) {
 
   const rewards = {};
   Object.keys(confirmedAuthHistories).forEach((stProv) => {
-    // Take the first event: this is, the event whose timestamp or
-    // opConfirmedTimestamp (the oldest of both) is closer to (and preferably
-    // lower than) start period time
-    const firstEvent = confirmedAuthHistories[stProv].reduce((acc, cur) => {
-      const accTimestamp = Number(acc.timestamp);
-      const curTimestamp = Number(cur.timestamp);
+    // sorting the events by timestamp in case they are not sorted yet
+    const sortedEvents = confirmedAuthHistories[stProv].sort(
+      (a, b) => Number(a.timestamp) - Number(b.timestamp)
+    );
 
-      let event = curTimestamp < accTimestamp ? cur : acc;
+    let accEligibleAmount = BigNumber(0);
+    let accDecreaseRequestedAmount = BigNumber(0);
+
+    // based on these auth events, let's create "authorization epochs"
+    // - each authorization epoch is defined by an authorization change event
+    // - each authorization epoch has a eligible amount and duration
+    // for example, if a stake decreased the full authorization in the half
+    // of the month, this stake will have 2 epochs: one with full amount
+    // and duration of 15 days, and another epoch with 0 amount and duration
+    // of 15 days
+
+    // note that we will calculate authorization epochs previous to this rewards
+    // period, but we will filter them later
+    const epochs = [];
+    // let's generate the epochs and calculate the rewards eligible amount based
+    // on the auth events history (queried to the subgraph)
+    for (let i = 0; i < sortedEvents.length; i++) {
+      const eventType = sortedEvents[i].eventType;
+      bigNumberEventAmount = BigNumber(sortedEvents[i].eventAmount);
+      if (eventType === "AuthorizationIncreased") {
+        // on increase, add the amount to the rewards eligible amount
+        accEligibleAmount = accEligibleAmount.plus(bigNumberEventAmount);
+      } else if (eventType === "AuthorizationDecreaseRequested") {
+        // on decrease REQUESTED, deduct the amount of rewards eligible amount
+        accEligibleAmount = accEligibleAmount.minus(bigNumberEventAmount);
+        accDecreaseRequestedAmount =
+          accDecreaseRequestedAmount.plus(bigNumberEventAmount);
+      } else if (
+        eventType === "AuthorizationDecreaseApproved" ||
+        eventType === "AuthorizationInvoluntaryDecreased"
+      ) {
+        // on decrease approved / involuntary decreased, we need to check if
+        // there was a previous decrease requested that covers this approved
+        // decrease
+        if (bigNumberEventAmount.lte(accDecreaseRequestedAmount)) {
+          accDecreaseRequestedAmount =
+            accDecreaseRequestedAmount.minus(bigNumberEventAmount);
+        } else {
+          const amountToDeduct = bigNumberEventAmount.minus(
+            accDecreaseRequestedAmount
+          );
+          accEligibleAmount = accEligibleAmount.minus(amountToDeduct);
+          accDecreaseRequestedAmount = BigNumber(0);
+        }
+      }
+
+      const epoch = {
+        eligibleAmount: accEligibleAmount.toFixed(0),
+        // the bigger timestamp between event's one and op confirmed's one
+        greatestStartTime: sortedEvents[i].greatestTimestamp,
+        duration: 0, // to be calculated later
+        beneficiary: sortedEvents[i].beneficiary,
+      };
+      epochs.push(epoch);
+    }
+
+    // We already calculated the eligible amount of the epochs, now we need to
+    // calculate their duration
+
+    // Take the first epoch happened on the rewards period: this is, the epoch
+    // whose timestamp (or opConfirmedTimestamp - the oldest of both) is closer
+    // to (and preferably lower than) start period time.
+    // Recalculate the duration of the first epoch within the rewards period
+    const firstEpoch = epochs.reduce((acc, cur) => {
+      const accTimestamp = acc.greatestStartTime;
+      const curTimestamp = cur.greatestStartTime;
+
+      let epoch = curTimestamp < accTimestamp ? cur : acc;
 
       // if both events are previous to start period, take the later
       if (
         curTimestamp < startPeriodTimestamp &&
         accTimestamp < startPeriodTimestamp
       ) {
-        event = curTimestamp > accTimestamp ? cur : acc;
+        epoch = curTimestamp > accTimestamp ? cur : acc;
       }
 
-      return event;
-    }, confirmedAuthHistories[stProv][0]);
+      return epoch;
+    }, epochs[0]);
 
-    // discard the events previous to the first event
-    const filteredEvents = confirmedAuthHistories[stProv].filter(
-      (event) => Number(event.timestamp) >= Number(firstEvent.timestamp)
+    // discard the epochs previous to the first epoch within the rewards period
+    const filteredEpochs = epochs.filter(
+      (epoch) => epoch.greatestStartTime >= firstEpoch.greatestStartTime
     );
 
-    // sorting the events
-    const sortedEvents = filteredEvents.sort(
-      (a, b) => Number(a.timestamp) - Number(b.timestamp)
-    );
+    // calculate the duration of every epoch
+    for (let i = 0; i < filteredEpochs.length; i++) {
+      let epochStartTime = filteredEpochs[i].greatestStartTime;
 
-    const epochs = [];
-    // based on these auth events, let's create authorization epochs
-    for (let i = 0; i < sortedEvents.length; i++) {
-      let duration = 0;
-      let epochStartTime = Number(sortedEvents[i].timestamp);
       // first epoch start time has a special treatment
       if (i === 0) {
         // greatestTimestamp is the bigger value between event timestamp and
         // operator confirmed timestamp
         epochStartTime =
-          sortedEvents[i].greatestTimestamp < startPeriodTimestamp
+          filteredEpochs[i].greatestStartTime < startPeriodTimestamp
             ? startPeriodTimestamp
-            : sortedEvents[i].greatestTimestamp;
+            : filteredEpochs[i].greatestStartTime;
       }
 
-      if (sortedEvents[i + 1]) {
-        duration = Number(sortedEvents[i + 1].timestamp) - epochStartTime;
-        // if no more events, the end timestamp is endPeriodTimestamp
+      if (filteredEpochs[i + 1]) {
+        duration = filteredEpochs[i + 1].greatestStartTime - epochStartTime;
       } else {
+        // if no more events, the end timestamp is endPeriodTimestamp
         duration = endPeriodTimestamp - epochStartTime;
       }
 
-      const epoch = {
-        amount: sortedEvents[i].amount,
-        startTime: epochStartTime,
-        duration: duration,
-        beneficiary: sortedEvents[i].beneficiary,
-      };
-      epochs.push(epoch);
+      epochs[i].duration = duration;
     }
 
+    // Calculating the rewards for each epoch
     const conversion_denominator = 100 * 100;
     const rewardsAPR = APR * conversion_denominator;
-
-    // Calculating the rewards for each epoch
     const reward = epochs.reduce((total, cur) => {
       // Since TIP-092 and TIP-100, the max eligible amount for rewards is 15MT
-      const capAmount = BigNumber(cur.amount).gt(15000000 * 10 ** 18)
+      const capAmount = BigNumber(cur.eligibleAmount).gt(15000000 * 10 ** 18)
         ? BigNumber(15_000_000 * 10 ** 18)
-        : BigNumber(cur.amount);
+        : BigNumber(cur.eligibleAmount);
       const epochReward = capAmount
         .times(rewardsAPR)
         .times(cur.duration)
