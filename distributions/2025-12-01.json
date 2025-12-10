@@ -1,7 +1,7 @@
 {
-    "accumulatedAmount": "2643291228607163730501816",
-    "thisDistributionAmount": "774094144379394098998559",
-    "merkleRoot": "0xdfe088955bb996bcb54af45a124362008bdb88ce78e1eecdabe746f3cba3a67d",
+    "accumulatedAmount": "2782187389567637915104783",
+    "thisDistributionAmount": "912990305339868283601526",
+    "merkleRoot": "0x13b1549c0baf4b53c12cfacaecb05ae47ab455da2bd1e213bddfd5ad3761a873",
     "claims": {
         "0x00ACA6dFd2fBCAD074A5F116bAD0B057900230D9": {
             "beneficiary": "0xF9246a85Be225910db96777CcED7A9f8aa163c68",
@@ -11,12 +11,10 @@
             "failedHeartbeats": [],
             "proof": [
                 "0xc1329aed026c88ebc4664c08ce8b753010b7c94c3be6dc8f9230a925004c01ae",
-                "0x54f48e5928ad8418ff4a9cd1d5ca25af8e6b2bac70f515fa5ea22b209639315f",
-                "0x50197fb426b8194b578b8f3afe4527c17ddd6fe2b0f086a01052f2aa5395fdd2",
-                "0xe105cb68e4af5283044554ba5cf82f7c30b0a460f299bb8b7e8f0a20cec64119",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xef9ace5ad4cd22e0d1cece274f25840f605218a2b98982d71313f00d3469fee7",
+                "0xa5d8941e6466193b8d1e8c37ce4388780de4a6fccce64d36c662e90810eb0097",
+                "0xdee3f1504ce3281854f327df49a861f7bb57a121dd88118d88830fbbb9f9ec80",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0x0154C52ec5b6a3010758dDe78079589E67526767": {
@@ -26,11 +24,11 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xe62d905b4613c657c581f96c716269986c87c3c76842995a917b73f3efa3bece",
-                "0x90d960961eb32e9b991325d2f78d4a773d115611d7883527a364c56fb211294a",
-                "0x544511613dfb0c238267d7b8c2d4cf9570ab2c2ff9b7378c44d77c1d063290c3",
-                "0xfd1031225277d6db4822ec8d5b88376d96747ed4d6bfc3fd3f2e20093cd71a31",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xe466742cc34e8a7a6de46e539f5222fbcc14963ecd3d5ad401178387758f4fec",
+                "0xebac699f3ff533f458f662d56a76e458f129688f86524bd89ffec9939ad0dc91",
+                "0x967827b88eab269c1e507a46dbe3bc8fff392314e8e78417ccef83f8fc8aa957",
+                "0x5135299f341d1f7ffeb7a2a5fed8251ba883337f4827b36e11d1cd0306aec81a",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0x05015cC23df7A1B8D459517088E00Baec5fbc373": {
@@ -46,12 +44,12 @@
             ],
             "proof": [
                 "0x25d9c4dc4fc74259a27e1343ce85d2c38fca07104e69591ca1aea12a051e2bbe",
-                "0x166e46938b04fed0ae9b7abfdd15058d221db07f7452707a7c8f80cec78e6a3e",
-                "0x4a5ce7e0240771c980c662bcc13b6002254b3ca7de2de1706e72e1339d40abce",
-                "0xc57d7b0ae6485cf4cac97ffdaede4bcee6d6c6574a9a6105fc5bb970757bc300",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x18772c9ac4496c21eef155776abf4de0564698d7407aaa2e3be2e37d77d1bd4b",
+                "0x9337824c29dbc0c761e3dbe3144784dc54b442cc6cb43035c7f08f611c97a2f6",
+                "0x464d18f9c0b3241b882bd0da2c55bc2b3d20f05c5541140576b4e763382ef9fc",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x064ae11966cd24ae08ad5282C9027836E2D1c47d": {
@@ -66,13 +64,13 @@
                 "1638"
             ],
             "proof": [
-                "0x49c8eef5e70ede0a8d6971e19d7842b2eb55adc9941df77f9dff19428615e7ba",
+                "0x48a1610d7abccc6b4355b0e334a83c1bfbc0906f1ed071d8689204204514ad61",
                 "0x190a04c7d65f1186dc824122460b032d47b39fc9fda8b6ab5ee5912823c86f2d",
-                "0x00df16a98ebb3e2d8d4413eae04dc782c032f6f46abc0eb4f3433d4586317d5b",
-                "0x0947db1180d8164bc5cf0a4bdc878ac521aec75010f8393f5af96e0a942743f1",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xbf8b537caded3982558d0f5e59ee41f8d0dae2240a4410acedae8753663381ba",
+                "0x6175046f252f8bc2952ae92f3eba54c6dcfe434fd8238067cb530f005ae59f60",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x095086293d57C5aD45f3f5243054AE199b005163": {
@@ -82,13 +80,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x3175391e1589c33cc04e60bcb53130a0f870151734b34e540f2fc68ba709af47",
-                "0x3ff758539fbd91c6c58fc68a243276fedc453deaaee93de1e066d577f7c9ae10",
-                "0x04fdc3d7f7a859a8adc8238e807e6453f82c6e61b86efdd7d945b9ec8f553658",
-                "0x0947db1180d8164bc5cf0a4bdc878ac521aec75010f8393f5af96e0a942743f1",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x2fb82f8c10460772dd5c7dee3dc7aefde2d79974986770e5d74d18adb84d888d",
+                "0x510184a7bd93eb7bb62a86ac1a4950870d66859a06cbf8fc5afd10e7d48f6e9b",
+                "0x1620f0e4ed1b10be416fd48d9374740ff3617a44e20522adf8374a7aef4f7802",
+                "0x464d18f9c0b3241b882bd0da2c55bc2b3d20f05c5541140576b4e763382ef9fc",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x0C19A07242755b3F107cfB4C74d236a18548541F": {
@@ -99,12 +97,12 @@
             "failedHeartbeats": [],
             "proof": [
                 "0x790d145364e3c648396d7ac0d41cd512b5b63aa988abd5a1038497299eb346a1",
-                "0xca7b590014f482a9b016c81230025c5f75deb41d3e433651a61f3de2054cbbdb",
-                "0x6432f854eacb976e7a1618fe2f17ec60ce6742bc8a5821b4410498f6db999fba",
-                "0x767d925f0ff38d8ef11f0ef1c3615dc3d8516a089fec2a6e5758ccb4b1d81e5d",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xcebb30280299451c9130362afe1113c791e73b6d9c9c48181b6e38c3d0c51850",
+                "0xc70a7c537d689867c55122b91bbdc13d3e4fc320092a80658de004220937f56a",
+                "0x95e929434298c963e1bc4617045afc10bff615fc119ae8a853c9746018f9005c",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x0f35c836864875C8E9392DA147F41300aB538091": {
@@ -115,26 +113,28 @@
             "failedHeartbeats": [],
             "proof": [
                 "0x1342dbf6b2eaad8ffbe73da8acf29a7f6c9caa23339b08f1ae5fa2e303c69978",
-                "0xb8dda0d8b31227ff999a2aae43a44bb06b276fd6c3e61ac6f1f0ab14f228d6de",
-                "0xf472ffecfaa4d1fb640df44d069d14dede8cecd1718a9ccbb8e9cd7c8f31c8d0",
-                "0xefe8082ff901a793c8574872b26d62fceed679bb9ea521d8dcd68429d7f1bbd2",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x73f73323731f8ec12ef1355b1e4505f31d5c00a25723a52cbd2c4d43afd0e24c",
+                "0x80f4408925e9fba08881b3967a5b866e52d4a07cdf1648621fa005b719274098",
+                "0x992c4c3cc445995b4e20837a051711da8928a4b09bf97a648a774eef76e6855b",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x1274b1Fb60bDB94a4DDDcac9c918930cafc95078": {
             "beneficiary": "0x6950c4C7E97c7d2e6b5bffEC4634f841DB2A5f3D",
-            "accumulatedAmount": "70119863013698630136987",
-            "earnedThisDistribution": "23116438356164383561644",
+            "accumulatedAmount": "93236301369863013698631",
+            "earnedThisDistribution": "46232876712328767123288",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xe58a83c39af27a21643a5943632ab3669f7880f9361edf935496ff57c655f0a2",
-                "0x90d960961eb32e9b991325d2f78d4a773d115611d7883527a364c56fb211294a",
-                "0x544511613dfb0c238267d7b8c2d4cf9570ab2c2ff9b7378c44d77c1d063290c3",
-                "0xfd1031225277d6db4822ec8d5b88376d96747ed4d6bfc3fd3f2e20093cd71a31",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xb2bd8ef8d6242196a0039918aae7162e99beda82c1163262d54922101a50de10",
+                "0x1181bbf208d2665c7dfe673ecfdd130df008c785246c5a354537452c9d1602d0",
+                "0x9d838d7c2a21054573ab95fbbae10ae4b9f6ad04d7a3806f2160a49265e58fb4",
+                "0x280ec6754d229dd8177fdc3a01935575bcf3766d40beb8c96456521779b9cd9a",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x2215a197a32834ef93C4D1029551bB8D3B924DCc": {
@@ -144,13 +144,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x1f2feb5d869ee5487868a3b9928210687f28c3e6eed44d46f6fd9ff1e4fba342",
+                "0x18621e9ec77bd5888c37b9be5abe29048ce6d9e584b613863f5c0f39f982aacb",
                 "0x8cd56587a295f5debe4f5562c7aac1c6f6a6942acd1bdb3f4c15ae4d96a974ef",
-                "0x4a5ce7e0240771c980c662bcc13b6002254b3ca7de2de1706e72e1339d40abce",
-                "0xc57d7b0ae6485cf4cac97ffdaede4bcee6d6c6574a9a6105fc5bb970757bc300",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x9337824c29dbc0c761e3dbe3144784dc54b442cc6cb43035c7f08f611c97a2f6",
+                "0x464d18f9c0b3241b882bd0da2c55bc2b3d20f05c5541140576b4e763382ef9fc",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x227Ae73b95F8377e4E37A8bc7aE7DdFF303C30B4": {
@@ -161,28 +161,28 @@
             "failedHeartbeats": [],
             "proof": [
                 "0x412212a0a803d4f2295b6695477c561460c3d43458b16db8bf64bc015000370c",
-                "0xdc76a02ffc3a5f4c1da58d2e87f89161c71260edc7c4de0264ca18601e1ae94d",
-                "0x04fdc3d7f7a859a8adc8238e807e6453f82c6e61b86efdd7d945b9ec8f553658",
-                "0x0947db1180d8164bc5cf0a4bdc878ac521aec75010f8393f5af96e0a942743f1",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x7349525b5e22d532f9b08ef4dadafea4a5f49bce95d7c4f0a770d0e28c87d252",
+                "0x927845afc4549ede6d56ce07f2f926326a11b99f859b0835cbd5858ad51e2e4c",
+                "0x6175046f252f8bc2952ae92f3eba54c6dcfe434fd8238067cb530f005ae59f60",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x24a278d2873879dcC8a17f504A75BFfcD4A3153a": {
             "beneficiary": "0x6950c4C7E97c7d2e6b5bffEC4634f841DB2A5f3D",
-            "accumulatedAmount": "70119863013698630136987",
-            "earnedThisDistribution": "23116438356164383561644",
+            "accumulatedAmount": "93236301369863013698631",
+            "earnedThisDistribution": "46232876712328767123288",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x26ffdd8f24e02fef5c05594335f0d5feb970e25cc2491ed68bb71d483bd9f316",
-                "0x634a0e9ab228a14cda70c1e5447ed038054fc6b61db5bd7e92e8ba478f8d30aa",
-                "0x259d6f88c704f68caa92218114dfce191fd1f4605782b0533202091443127b31",
-                "0xc57d7b0ae6485cf4cac97ffdaede4bcee6d6c6574a9a6105fc5bb970757bc300",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x2947bb44a682e3dfc97462a7485c9f28b289054baace77901c784862191b5740",
+                "0xd48de25b2d3fe2b204c4cd521c692843add26a4288eae5a1331bfbfefa82ba7b",
+                "0x1620f0e4ed1b10be416fd48d9374740ff3617a44e20522adf8374a7aef4f7802",
+                "0x464d18f9c0b3241b882bd0da2c55bc2b3d20f05c5541140576b4e763382ef9fc",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x25d9bbb4Eccbf3A5e6d6BBCE9813302E508f321D": {
@@ -192,13 +192,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x94edcc30a8fc0c86f07d908d34e1e75972cdaaf2dec2a6f2042223655e6b30e8",
-                "0xc3796b9c99f6f93ac1fe2603df38bd8480c220f6f6e3c2034fcd8f51c8c20fde",
-                "0x33925903967e5aaaeb3818ad5a45cfd044a276bb4118dc16aacb69797430368f",
-                "0xf5e766401ab1bdec6b8db7ecd0ea46c9934206edf096ab820850c0e48bf5a079",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x8a7647e1ce87eecb88c4ed0740a34c3d8d37871bb71a524ead655faee57aa79a",
+                "0xb4251684b9fc80c36858985ffdb376f877dc4c43c6ba27f452b313d8caf39b0e",
+                "0xa01bd076f3046bedf73e2c86e191eefdd7cb20060a80f0094dbed85b0e7b7e79",
+                "0xc9da79ebeb851e90f1b64b5f643d5bf6489da136bce40f4ae321aa869eb52582",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x2B1D879B5e102e60166202de79537B48E2F18a42": {
@@ -208,13 +208,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x2f83501067bd1dfdf22ef19df18de3fd1b0ef027fc8397d4d9e0953baaa6a579",
+                "0x3213e0ceecbec76df4c2651613050e27c2648613f9ff905c9adaed0ad2135d7b",
                 "0x3ff758539fbd91c6c58fc68a243276fedc453deaaee93de1e066d577f7c9ae10",
-                "0x04fdc3d7f7a859a8adc8238e807e6453f82c6e61b86efdd7d945b9ec8f553658",
-                "0x0947db1180d8164bc5cf0a4bdc878ac521aec75010f8393f5af96e0a942743f1",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x927845afc4549ede6d56ce07f2f926326a11b99f859b0835cbd5858ad51e2e4c",
+                "0x6175046f252f8bc2952ae92f3eba54c6dcfe434fd8238067cb530f005ae59f60",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x2dE8481F08e5c2fe88c653A64AE42CA00B20E98D": {
@@ -224,13 +224,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x8ac281034d2517c7d87a86ed68ba4bdad6ec95c538c4d96c0fe5323b8d0d384d",
-                "0xc3796b9c99f6f93ac1fe2603df38bd8480c220f6f6e3c2034fcd8f51c8c20fde",
-                "0x33925903967e5aaaeb3818ad5a45cfd044a276bb4118dc16aacb69797430368f",
-                "0xf5e766401ab1bdec6b8db7ecd0ea46c9934206edf096ab820850c0e48bf5a079",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x9a6dc4c7100eb626c6e1afdb8ec125a6c1bef95aa4774384a2da2c3d5ac54613",
+                "0x89b119649240f6a6590a76a812154623b473b81638999ef2823eb2cc915a02b9",
+                "0xa1daece2879603e48ecbb653406bdaf0401e0bf6641dec901996841556239269",
+                "0xc9da79ebeb851e90f1b64b5f643d5bf6489da136bce40f4ae321aa869eb52582",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x3070f20f86fDa706Ac380F5060D256028a46eC29": {
@@ -241,12 +241,12 @@
             "failedHeartbeats": [],
             "proof": [
                 "0x3eb8e60984c8468e4e3cfbac275ca550e1abfc44ab76d0c1007a83bc4e99af3c",
-                "0xdc76a02ffc3a5f4c1da58d2e87f89161c71260edc7c4de0264ca18601e1ae94d",
-                "0x04fdc3d7f7a859a8adc8238e807e6453f82c6e61b86efdd7d945b9ec8f553658",
-                "0x0947db1180d8164bc5cf0a4bdc878ac521aec75010f8393f5af96e0a942743f1",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x7349525b5e22d532f9b08ef4dadafea4a5f49bce95d7c4f0a770d0e28c87d252",
+                "0x927845afc4549ede6d56ce07f2f926326a11b99f859b0835cbd5858ad51e2e4c",
+                "0x6175046f252f8bc2952ae92f3eba54c6dcfe434fd8238067cb530f005ae59f60",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x36efDC29c776c35B55D08E657bF3048eDf65b1dD": {
@@ -256,13 +256,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xa673a610534d3c56d46a70ef0d431ac1f0afc343b74d654c1891a50982566c82",
-                "0xc805c00c0e2d8faa7f47a0dfdf91029b99f419e8e72a89417636e44bf35121e8",
-                "0x297e440da679bd6d9309b93b0c62a60f9109f272e9cf237dae62f5d543b04eb0",
-                "0x75ebbfdda9a77606e5fd42f04efc1b29c821a0eafe3da839fe2b034a89aeb2e4",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xa7b2719fdaceb39afffa830e450abb9ea6211f67be4321f434f463fd65395142",
+                "0xa0dc3ff151c247520169979a930d8b2efe4337984638b911f520e6750d0fcdc6",
+                "0xb54adaa80aa8367b7512fc5bbdfd068e326ad034f0dd3b40c1b173afc39e23ac",
+                "0x34b92638bf279cf0373f7de52a6e73a180bf17dee2aa6a4c75e9462fd2c44315",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x378C89b5B93667A005856822e1b65e2d7C076373": {
@@ -272,11 +272,11 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xd6649311ba909a446d407198d146cc1ee5ef02573518d69fed2c05c1a0b163cf",
-                "0x545f69dcac443ac299062c99febfcbefbf334e843db3c589db413b0c50ea2b26",
-                "0x871d084c44b57136350ec86b2b46dc3e44fdfabfc8cc98a930857457097eb7cb",
-                "0x930c6ff353286ec8a4aee410f2756740d97af0f01acfa577d344788c19d69806",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xdf5185e93b4eed30ac10684480ac9214f133ca2894ba198de008ed161a1b0329",
+                "0xbc74ceb5c7f188cf04f76bf6887438955a1845c0710b578c04837ec4513bbea8",
+                "0x967827b88eab269c1e507a46dbe3bc8fff392314e8e78417ccef83f8fc8aa957",
+                "0x5135299f341d1f7ffeb7a2a5fed8251ba883337f4827b36e11d1cd0306aec81a",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0x3B8FeB29eFb63A7609D5351b3A6AdDaed3c1C7eD": {
@@ -286,25 +286,27 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xe466742cc34e8a7a6de46e539f5222fbcc14963ecd3d5ad401178387758f4fec",
-                "0x911a8835b42ad2361e6045cb59fef7c831f196d175fdc879954c8e863d7ec9c1",
-                "0x871d084c44b57136350ec86b2b46dc3e44fdfabfc8cc98a930857457097eb7cb",
-                "0x930c6ff353286ec8a4aee410f2756740d97af0f01acfa577d344788c19d69806",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xd6c1dfefd55ecdfc1c86ecb9d76c2c4eebd4965cbcb21c3cc4743d2f70be082e",
+                "0xbc74ceb5c7f188cf04f76bf6887438955a1845c0710b578c04837ec4513bbea8",
+                "0x967827b88eab269c1e507a46dbe3bc8fff392314e8e78417ccef83f8fc8aa957",
+                "0x5135299f341d1f7ffeb7a2a5fed8251ba883337f4827b36e11d1cd0306aec81a",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0x422FcafA2f3E23B52AC34E6A94909467480155af": {
             "beneficiary": "0x422FcafA2f3E23B52AC34E6A94909467480155af",
-            "accumulatedAmount": "46746575342465753424658",
-            "earnedThisDistribution": "15410958904109589041096",
+            "accumulatedAmount": "31461986301369863013699",
+            "earnedThisDistribution": "126369863013698630137",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xe79129d8d5b02bb23040bf24ef47d9883332a187db21953a3493b1c96b64f8c0",
-                "0x5e726bbb8255ccae489a9d7293eedb12a033ce47e0bc768834a558f59dd8a530",
-                "0x544511613dfb0c238267d7b8c2d4cf9570ab2c2ff9b7378c44d77c1d063290c3",
-                "0xfd1031225277d6db4822ec8d5b88376d96747ed4d6bfc3fd3f2e20093cd71a31",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xb8d266a15a3db7da6a5bd8d434754d4cfd54ae61feb8e37790dae18d5311e504",
+                "0x1181bbf208d2665c7dfe673ecfdd130df008c785246c5a354537452c9d1602d0",
+                "0x9d838d7c2a21054573ab95fbbae10ae4b9f6ad04d7a3806f2160a49265e58fb4",
+                "0x280ec6754d229dd8177fdc3a01935575bcf3766d40beb8c96456521779b9cd9a",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x42BF5fF61279eDDa10A6e8268A30640eD710a866": {
@@ -314,27 +316,29 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x7429016fe66ecd98d9975b40d8798a5ce8d52b66c68b98cd21cf0a2baa314902",
-                "0x3a93fc65c950ea73afd2e0231449b8d8c8bd72b142ecf1297ba42b00c0aa70d9",
-                "0x6432f854eacb976e7a1618fe2f17ec60ce6742bc8a5821b4410498f6db999fba",
-                "0x767d925f0ff38d8ef11f0ef1c3615dc3d8516a089fec2a6e5758ccb4b1d81e5d",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x619e7db95d8bb5600a36abe40ed7650ee6a51b90d0b25987b47f74dff48705aa",
+                "0xbfa3287d0b5878248c35a5a7b2634c67d4dbc26cf2d98a09653f08fe257428cb",
+                "0x3360ce50fed23ed99dcb9c2c2c20aa05307ee92e4292124cb5f0aa740c3b6f8a",
+                "0x5fa3dd6f01ac9c5130636a9364409a7c06901eae104ac1aa0340b624871f1fb5",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x43e17eEcaC8812B8E96E89B6075C5de63680d194": {
             "beneficiary": "0xafEACcE4AD8B3b863eF72A7B7AA9d0E84Ca71DFb",
-            "accumulatedAmount": "6210072417237442922374",
-            "earnedThisDistribution": "0",
+            "accumulatedAmount": "50777519518264840182648",
+            "earnedThisDistribution": "44567447101027397260274",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xc766561450c710b7526dd8ebfe216fed684ad7f3cb5ed1711ea4050a3a7c8f0c",
-                "0x802c1e932f110b79473306ac28412830527ab40239f5ba8202682aee01e95eee",
-                "0x8e38b58b6fa8a98b53e74e05c8f2f1beb1c31bfe6f826741069672ee0aa68d2f",
-                "0x930c6ff353286ec8a4aee410f2756740d97af0f01acfa577d344788c19d69806",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0x3175391e1589c33cc04e60bcb53130a0f870151734b34e540f2fc68ba709af47",
+                "0x3ff758539fbd91c6c58fc68a243276fedc453deaaee93de1e066d577f7c9ae10",
+                "0x927845afc4549ede6d56ce07f2f926326a11b99f859b0835cbd5858ad51e2e4c",
+                "0x6175046f252f8bc2952ae92f3eba54c6dcfe434fd8238067cb530f005ae59f60",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x4553dAA29662971ff6f1cA59390287E8Bc25825F": {
@@ -345,12 +349,12 @@
             "failedHeartbeats": [],
             "proof": [
                 "0x4182cf1136cc4b7a6db6ef0d6fe26d061f5d714cd095c428172eb8f37dbb55e8",
-                "0x1f852aa3e7fcfb62ec73096339b2b2253c476453c0853b4f38dd807c06892213",
-                "0x00df16a98ebb3e2d8d4413eae04dc782c032f6f46abc0eb4f3433d4586317d5b",
-                "0x0947db1180d8164bc5cf0a4bdc878ac521aec75010f8393f5af96e0a942743f1",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x69e2f5fe54e4c7e79a7ee917e63b5ce29346fe2d346be5f00c7ab00ddfd9cf53",
+                "0xbf8b537caded3982558d0f5e59ee41f8d0dae2240a4410acedae8753663381ba",
+                "0x6175046f252f8bc2952ae92f3eba54c6dcfe434fd8238067cb530f005ae59f60",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x456D643CD97b058Fd3bBBEB76f04B1DE3679bc6A": {
@@ -361,12 +365,12 @@
             "failedHeartbeats": [],
             "proof": [
                 "0xb0da2f9abb05a05470172abfe78232eb144a839c2b421fd61b28b3be0506ebd9",
-                "0xa415d2a24339716f200a6d1109b727320c2ace49c6ffbcdae6928ebbb2dbad6d",
-                "0x44f1b65583156a2470405e4005fc3cd04fa6fd334acb65c096bda99183aa1201",
-                "0xe105cb68e4af5283044554ba5cf82f7c30b0a460f299bb8b7e8f0a20cec64119",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xf1ca3757c066fadd5b8836494dfaa79c3b1fdc276cb6279be8164259fece90cd",
+                "0x9d838d7c2a21054573ab95fbbae10ae4b9f6ad04d7a3806f2160a49265e58fb4",
+                "0x280ec6754d229dd8177fdc3a01935575bcf3766d40beb8c96456521779b9cd9a",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x492Af9a0B99FED66dce727bB96Ad133dB83CdAf6": {
@@ -377,12 +381,12 @@
             "failedHeartbeats": [],
             "proof": [
                 "0xaa47cc91068fdbc8d931571a5021f62507ffc23deecc9d7029f676ac54cc44c7",
-                "0x86dc763c28f71260af1bcb40bd645b40573f7d09d89a3aef4147ab2ab150b777",
-                "0x049c1154a83a0d67ff87f26abbc4778f852a9d9daedc4f9fb437bff5a9c4f62e",
-                "0x75ebbfdda9a77606e5fd42f04efc1b29c821a0eafe3da839fe2b034a89aeb2e4",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xa415d2a24339716f200a6d1109b727320c2ace49c6ffbcdae6928ebbb2dbad6d",
+                "0xea74a663ee55cd3554e38425753cae420b66bf16861043971742548915d0064c",
+                "0x280ec6754d229dd8177fdc3a01935575bcf3766d40beb8c96456521779b9cd9a",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x4bC6B29F272048b32BD833797a70049C3885225b": {
@@ -394,13 +398,13 @@
                 "1515"
             ],
             "proof": [
-                "0x7a71765d8b52f3a0578a62913bfe265f9db86ab937b2e401aa93dca6c0094771",
-                "0xfefb1f66cf91aed29db49f4f25b2cb640767f63825edd72418c7142d9434423c",
-                "0x36cc71870ba457531ca684a5ec66f667967ef852ac09f1c697209f2b27e1f97b",
-                "0x767d925f0ff38d8ef11f0ef1c3615dc3d8516a089fec2a6e5758ccb4b1d81e5d",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x7ba4fe2227f43bdb762429bee0d1271915e632c62e81c89801f418871b6bbc65",
+                "0xb098d8d4e7e2d687694d4a7d31a88789e2839b19a53f88c3c79c0d2e7b3cb188",
+                "0x8b77ee338b9f4c1afb1a42759a98aa204d380b5bd3d5db29521d105d8ce6b757",
+                "0x95e929434298c963e1bc4617045afc10bff615fc119ae8a853c9746018f9005c",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x4c496f9903450Aa2092a39efe722E6971D8fAb49": {
@@ -410,29 +414,29 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x7fd9854c5d78a1491a45a028a71de705b4707e52d169efff7f101a244d7f2455",
-                "0x072c8fde1741ba8f2a34daaefb10f80350673fc6e4158b9459467f756e1b8997",
-                "0xb516312e2c5f248f92c667cb648026e54517f432487757e6a87f1da721b27bcd",
-                "0xf5e766401ab1bdec6b8db7ecd0ea46c9934206edf096ab820850c0e48bf5a079",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x89b5e05aa1ff40eaaa97549eff3df8b98463e471635df1df313bf6273f4ce1fd",
+                "0x8790fe0874f3dc32abd3efc66442d88b63528d88961cb0b0c66495436798bd89",
+                "0xa01bd076f3046bedf73e2c86e191eefdd7cb20060a80f0094dbed85b0e7b7e79",
+                "0xc9da79ebeb851e90f1b64b5f643d5bf6489da136bce40f4ae321aa869eb52582",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x4FD06c3B1AbF62bbcC395745224591c89ebceea8": {
             "beneficiary": "0x4FD06c3B1AbF62bbcC395745224591c89ebceea8",
-            "accumulatedAmount": "46746575342465753424658",
-            "earnedThisDistribution": "15410958904109589041096",
+            "accumulatedAmount": "31461986301369863013699",
+            "earnedThisDistribution": "126369863013698630137",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x1f12fff6de42670e164fbe3bafdba49d9bfc89b2858e5fd9c48b13b21b88d47b",
-                "0x8cd56587a295f5debe4f5562c7aac1c6f6a6942acd1bdb3f4c15ae4d96a974ef",
-                "0x4a5ce7e0240771c980c662bcc13b6002254b3ca7de2de1706e72e1339d40abce",
-                "0xc57d7b0ae6485cf4cac97ffdaede4bcee6d6c6574a9a6105fc5bb970757bc300",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x8424be0191a0f845ea86728c468090f9bbb361cba82e81f4c25aab3e947cf60a",
+                "0x8790fe0874f3dc32abd3efc66442d88b63528d88961cb0b0c66495436798bd89",
+                "0xa01bd076f3046bedf73e2c86e191eefdd7cb20060a80f0094dbed85b0e7b7e79",
+                "0xc9da79ebeb851e90f1b64b5f643d5bf6489da136bce40f4ae321aa869eb52582",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x5270BA998643bE976c106298C08C46947c5Bf774": {
@@ -447,13 +451,13 @@
                 "1619"
             ],
             "proof": [
-                "0x0cfd8e0b1af45b9849a3129816221a3f5aa4a47db7f970371602e2b1cdd073dc",
-                "0x0309e2402687b67c8fb9daa470c0823e016a1a0367d48c64495d3c2b6f08eea6",
-                "0x40923c11d7e0273d075ef7d3c96fa0dbf8bab453c4be530a84279cbb646ed3d2",
-                "0xefe8082ff901a793c8574872b26d62fceed679bb9ea521d8dcd68429d7f1bbd2",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x099bdb0e51f6cbf6d674904bfa0b56b452973ed60c10305d361b7bf9dcf0e6b8",
+                "0x5a1c2b7560689c08f24dd469132ba582f1c915524d7edf0f677835639f29c481",
+                "0xc15161d5998ae31b9634090a74b6f263eff3612cd80dd69e81c5f6904c021030",
+                "0x992c4c3cc445995b4e20837a051711da8928a4b09bf97a648a774eef76e6855b",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x56C968857EF4919c67d151b56E7073065994c97a": {
@@ -464,28 +468,26 @@
             "failedHeartbeats": [],
             "proof": [
                 "0x26005226eba7cc54652ae8eb0576ce2fc65e749e31f462f97d2e6289ff2802c4",
-                "0x166e46938b04fed0ae9b7abfdd15058d221db07f7452707a7c8f80cec78e6a3e",
-                "0x4a5ce7e0240771c980c662bcc13b6002254b3ca7de2de1706e72e1339d40abce",
-                "0xc57d7b0ae6485cf4cac97ffdaede4bcee6d6c6574a9a6105fc5bb970757bc300",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x18772c9ac4496c21eef155776abf4de0564698d7407aaa2e3be2e37d77d1bd4b",
+                "0x9337824c29dbc0c761e3dbe3144784dc54b442cc6cb43035c7f08f611c97a2f6",
+                "0x464d18f9c0b3241b882bd0da2c55bc2b3d20f05c5541140576b4e763382ef9fc",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x58F197D2647C1f45d7308fd20157aaEaF5040Faa": {
             "beneficiary": "0x6950c4C7E97c7d2e6b5bffEC4634f841DB2A5f3D",
-            "accumulatedAmount": "70119863013698630136987",
-            "earnedThisDistribution": "23116438356164383561644",
+            "accumulatedAmount": "93236301369863013698631",
+            "earnedThisDistribution": "46232876712328767123288",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x8a7647e1ce87eecb88c4ed0740a34c3d8d37871bb71a524ead655faee57aa79a",
-                "0x207a3a4ae4df48cac1ac88a8b1ae64606f8d7d41b9172a0748c1866182f073df",
-                "0xb516312e2c5f248f92c667cb648026e54517f432487757e6a87f1da721b27bcd",
-                "0xf5e766401ab1bdec6b8db7ecd0ea46c9934206edf096ab820850c0e48bf5a079",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xbf6e9a11c3cd61f3ef6556c09be418a4ea0323a7dc36a77bfb922c78937c80fd",
+                "0xd7d52a9fdcf57565bd2d234363c191a6bc00bbb1da3161af50df8d878f889d18",
+                "0xa5d8941e6466193b8d1e8c37ce4388780de4a6fccce64d36c662e90810eb0097",
+                "0xdee3f1504ce3281854f327df49a861f7bb57a121dd88118d88830fbbb9f9ec80",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0x5F24A56620E8aB22Ff01585F83F6f63F8B5c205E": {
@@ -495,13 +497,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xa9e375ece7fe97786201484de97ac2f999820ddd4e48222940d7662d897123bc",
-                "0xd726ae6facd5d73224a86fff5dff70c06be7d02fcbd6940af1d3ca2bd2400ef3",
-                "0x049c1154a83a0d67ff87f26abbc4778f852a9d9daedc4f9fb437bff5a9c4f62e",
-                "0x75ebbfdda9a77606e5fd42f04efc1b29c821a0eafe3da839fe2b034a89aeb2e4",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xa758ca1c514685763a6708937715fd269ce1196f7750e308afcdd2446e6973a7",
+                "0xa0dc3ff151c247520169979a930d8b2efe4337984638b911f520e6750d0fcdc6",
+                "0xb54adaa80aa8367b7512fc5bbdfd068e326ad034f0dd3b40c1b173afc39e23ac",
+                "0x34b92638bf279cf0373f7de52a6e73a180bf17dee2aa6a4c75e9462fd2c44315",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x606c9936A8B5C70061b3464424ab7d45302eF9b7": {
@@ -511,29 +513,29 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x45a9aa4b79353b50833579f3b100722f8538f9fa8b5081d1e53d1d6076187bb3",
-                "0x190a04c7d65f1186dc824122460b032d47b39fc9fda8b6ab5ee5912823c86f2d",
-                "0x00df16a98ebb3e2d8d4413eae04dc782c032f6f46abc0eb4f3433d4586317d5b",
-                "0x0947db1180d8164bc5cf0a4bdc878ac521aec75010f8393f5af96e0a942743f1",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x4d97cb6e3ef90450521fed16776139e2da8576dfe54d74d90b989b3b1d061380",
+                "0xb9ce0e8d8ed0fbc2fbf46b5034857c108b0f797f9fd31f629f9036999522d78d",
+                "0xa1428f811946aa62c992862c66544c40a4b7ad0e85a379a348f1c43cadfcf36b",
+                "0x5fa3dd6f01ac9c5130636a9364409a7c06901eae104ac1aa0340b624871f1fb5",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x6184C57B7B87EbBf7fa9eB6933682a781777f81D": {
             "beneficiary": "0x6950c4C7E97c7d2e6b5bffEC4634f841DB2A5f3D",
-            "accumulatedAmount": "70119863013698630136987",
-            "earnedThisDistribution": "23116438356164383561644",
+            "accumulatedAmount": "93236301369863013698631",
+            "earnedThisDistribution": "46232876712328767123288",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x121beb1774aea18008ee3e75f8b3399032f2c841453b9d46416936e3c1cf7c6b",
-                "0xed305a404b251d649977790756591c0809debc49c9ffb982063f55136eb40553",
-                "0x40923c11d7e0273d075ef7d3c96fa0dbf8bab453c4be530a84279cbb646ed3d2",
-                "0xefe8082ff901a793c8574872b26d62fceed679bb9ea521d8dcd68429d7f1bbd2",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x17044441d92afc23552ca9c197767bbec54cd2037897da48413a2173eb20ea41",
+                "0x79d0e287aa9d912ff4ca31f1fc92a6ec77070fdd6f142e67c86dc5248036e36b",
+                "0x80f4408925e9fba08881b3967a5b866e52d4a07cdf1648621fa005b719274098",
+                "0x992c4c3cc445995b4e20837a051711da8928a4b09bf97a648a774eef76e6855b",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x6a2829A6B7186c62E2b4c7bb6434E880daF2B4C4": {
@@ -543,13 +545,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x8424be0191a0f845ea86728c468090f9bbb361cba82e81f4c25aab3e947cf60a",
-                "0x072c8fde1741ba8f2a34daaefb10f80350673fc6e4158b9459467f756e1b8997",
-                "0xb516312e2c5f248f92c667cb648026e54517f432487757e6a87f1da721b27bcd",
-                "0xf5e766401ab1bdec6b8db7ecd0ea46c9934206edf096ab820850c0e48bf5a079",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x7f6f97fe28fb57d79cb161fbab534be3d93bc11ffa610aea10b07ab0c68238b6",
+                "0x259def04509a33cec32f132e61aed22c1e280aaf39a2c8f92b1e253ea9eba43c",
+                "0x8b77ee338b9f4c1afb1a42759a98aa204d380b5bd3d5db29521d105d8ce6b757",
+                "0x95e929434298c963e1bc4617045afc10bff615fc119ae8a853c9746018f9005c",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x6c43dBdd7E44892dB4fD81c92FaDfdD7E54C408E": {
@@ -559,13 +561,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x9c7d84afc4ccab7fe6b9dd92487af06940a72a6ffa059605624695603bfc1424",
-                "0xa8f10a299d0226746b8920cd16cf8ee12ee6f808f1e678d0c464187fdf9448de",
-                "0x297e440da679bd6d9309b93b0c62a60f9109f272e9cf237dae62f5d543b04eb0",
-                "0x75ebbfdda9a77606e5fd42f04efc1b29c821a0eafe3da839fe2b034a89aeb2e4",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xa2db708081d404ce510b7661604447ea0a517dad3e143227196587f2f4890d88",
+                "0xeb35113dc5ded3dd2926745b91e6a0597ede6f8cba0d2858a75bcd38d479aef4",
+                "0x4c546f2d53bcffec978a8179fecfa9f8197ff6d34ee6beb18a01ec526b4b586f",
+                "0x34b92638bf279cf0373f7de52a6e73a180bf17dee2aa6a4c75e9462fd2c44315",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x700277dEaf138c6af9B3177F83918B6a3544F27F": {
@@ -575,13 +577,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x17044441d92afc23552ca9c197767bbec54cd2037897da48413a2173eb20ea41",
-                "0x79d0e287aa9d912ff4ca31f1fc92a6ec77070fdd6f142e67c86dc5248036e36b",
-                "0xf472ffecfaa4d1fb640df44d069d14dede8cecd1718a9ccbb8e9cd7c8f31c8d0",
-                "0xefe8082ff901a793c8574872b26d62fceed679bb9ea521d8dcd68429d7f1bbd2",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x1f12fff6de42670e164fbe3bafdba49d9bfc89b2858e5fd9c48b13b21b88d47b",
+                "0x8cd56587a295f5debe4f5562c7aac1c6f6a6942acd1bdb3f4c15ae4d96a974ef",
+                "0x9337824c29dbc0c761e3dbe3144784dc54b442cc6cb43035c7f08f611c97a2f6",
+                "0x464d18f9c0b3241b882bd0da2c55bc2b3d20f05c5541140576b4e763382ef9fc",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x735dcf0cAf62cd1bC8E763e43Bb1aA11DBC56025": {
@@ -592,12 +594,12 @@
             "failedHeartbeats": [],
             "proof": [
                 "0xafe4c77eee6a39c362ed13005caca3517e0de13acec8dc9ebaa039c8e49aa35f",
-                "0x1181bbf208d2665c7dfe673ecfdd130df008c785246c5a354537452c9d1602d0",
-                "0x44f1b65583156a2470405e4005fc3cd04fa6fd334acb65c096bda99183aa1201",
-                "0xe105cb68e4af5283044554ba5cf82f7c30b0a460f299bb8b7e8f0a20cec64119",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xd726ae6facd5d73224a86fff5dff70c06be7d02fcbd6940af1d3ca2bd2400ef3",
+                "0xea74a663ee55cd3554e38425753cae420b66bf16861043971742548915d0064c",
+                "0x280ec6754d229dd8177fdc3a01935575bcf3766d40beb8c96456521779b9cd9a",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x8B823356ec7f90d0fE45122125F66ddB934b840F": {
@@ -608,12 +610,12 @@
             "failedHeartbeats": [],
             "proof": [
                 "0xae32650248140d38f597d75c23e8204573eb2d482c291602c7eb333823c6b7ae",
-                "0x1181bbf208d2665c7dfe673ecfdd130df008c785246c5a354537452c9d1602d0",
-                "0x44f1b65583156a2470405e4005fc3cd04fa6fd334acb65c096bda99183aa1201",
-                "0xe105cb68e4af5283044554ba5cf82f7c30b0a460f299bb8b7e8f0a20cec64119",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xd726ae6facd5d73224a86fff5dff70c06be7d02fcbd6940af1d3ca2bd2400ef3",
+                "0xea74a663ee55cd3554e38425753cae420b66bf16861043971742548915d0064c",
+                "0x280ec6754d229dd8177fdc3a01935575bcf3766d40beb8c96456521779b9cd9a",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x8ea9ab079eACa83f3Ab9e1Aa0D62A60a3fa8e163": {
@@ -624,28 +626,26 @@
             "failedHeartbeats": [],
             "proof": [
                 "0xc07ae44c9dba857b1abd19e8d3a128cafd506024470b1af4ff9677901258c0d6",
-                "0x54f48e5928ad8418ff4a9cd1d5ca25af8e6b2bac70f515fa5ea22b209639315f",
-                "0x50197fb426b8194b578b8f3afe4527c17ddd6fe2b0f086a01052f2aa5395fdd2",
-                "0xe105cb68e4af5283044554ba5cf82f7c30b0a460f299bb8b7e8f0a20cec64119",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xef9ace5ad4cd22e0d1cece274f25840f605218a2b98982d71313f00d3469fee7",
+                "0xa5d8941e6466193b8d1e8c37ce4388780de4a6fccce64d36c662e90810eb0097",
+                "0xdee3f1504ce3281854f327df49a861f7bb57a121dd88118d88830fbbb9f9ec80",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0x90995f26f874AcEb98f12E09E057FBD2E546B1Ea": {
             "beneficiary": "0xeaf047aDfF888526210B95e2F1F9D10f5053574C",
-            "accumulatedAmount": "70119863013698630136987",
-            "earnedThisDistribution": "23116438356164383561644",
+            "accumulatedAmount": "47129794520547945205480",
+            "earnedThisDistribution": "126369863013698630137",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x554abde5b9049652c7ac23fa865844bb83ec6e11d2251c6f265ffda91b44f9ce",
-                "0x81825873df988b26d96364cfcf68818c23fa2f39889658a257b2479311bb7e0b",
-                "0x57defe5515eb02a52d250fad024dacb116d10218f320c986063ad94c41e8e052",
-                "0xbd123bcfc245b981040e7ed9d3f591f980febdc976478b59bd57c1ff92f74249",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x45a9aa4b79353b50833579f3b100722f8538f9fa8b5081d1e53d1d6076187bb3",
+                "0x190a04c7d65f1186dc824122460b032d47b39fc9fda8b6ab5ee5912823c86f2d",
+                "0xbf8b537caded3982558d0f5e59ee41f8d0dae2240a4410acedae8753663381ba",
+                "0x6175046f252f8bc2952ae92f3eba54c6dcfe434fd8238067cb530f005ae59f60",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x913fC1644376dA7e125cBb87a010e7Dd3b34D67c": {
@@ -655,29 +655,29 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x0b9a1efcd384afbb0f3591c9b9e1e309e5090dd8d3663b5c47565a38a57367ec",
-                "0x0309e2402687b67c8fb9daa470c0823e016a1a0367d48c64495d3c2b6f08eea6",
-                "0x40923c11d7e0273d075ef7d3c96fa0dbf8bab453c4be530a84279cbb646ed3d2",
-                "0xefe8082ff901a793c8574872b26d62fceed679bb9ea521d8dcd68429d7f1bbd2",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x121beb1774aea18008ee3e75f8b3399032f2c841453b9d46416936e3c1cf7c6b",
+                "0x8ba9af97179389b48e7135ce82e1a70a4c4a45c83de2a404673645daef2e96ed",
+                "0xc15161d5998ae31b9634090a74b6f263eff3612cd80dd69e81c5f6904c021030",
+                "0x992c4c3cc445995b4e20837a051711da8928a4b09bf97a648a774eef76e6855b",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x941788b051703bBC79962822460a2B571CfFcd7D": {
             "beneficiary": "0x83DB892a6688B966122Be219fa873BF24D7db79F",
-            "accumulatedAmount": "3288621575342465753424",
-            "earnedThisDistribution": "1084160958904109589041",
+            "accumulatedAmount": "2204460616438356164383",
+            "earnedThisDistribution": "0",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x7b5ce7310512e784eac1086228a917a42591ab075e44b7d055bc900f043573d6",
-                "0xfefb1f66cf91aed29db49f4f25b2cb640767f63825edd72418c7142d9434423c",
-                "0x36cc71870ba457531ca684a5ec66f667967ef852ac09f1c697209f2b27e1f97b",
-                "0x767d925f0ff38d8ef11f0ef1c3615dc3d8516a089fec2a6e5758ccb4b1d81e5d",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xa673a610534d3c56d46a70ef0d431ac1f0afc343b74d654c1891a50982566c82",
+                "0xf9a4fd730b5b1f18b14350d9b62886dbe51be4c833664b880effa874e2752f37",
+                "0x4c546f2d53bcffec978a8179fecfa9f8197ff6d34ee6beb18a01ec526b4b586f",
+                "0x34b92638bf279cf0373f7de52a6e73a180bf17dee2aa6a4c75e9462fd2c44315",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x9709173Ed6F194a953a77204359DbFD0e88a54D0": {
@@ -687,13 +687,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x4e2d57c70726c7da198889d85e9775c6e79d082f3997951cfc152e7f86506b44",
-                "0x1fab0bf22c196f79798af46bd7aea333113e83251bbed9ed29afae340fea4348",
-                "0xd8842a89248a7a4d7c9761bcc06240dc2e5d36ccff12220ec55aca15fa6d7dc8",
-                "0xbd123bcfc245b981040e7ed9d3f591f980febdc976478b59bd57c1ff92f74249",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x49c8eef5e70ede0a8d6971e19d7842b2eb55adc9941df77f9dff19428615e7ba",
+                "0xb9ce0e8d8ed0fbc2fbf46b5034857c108b0f797f9fd31f629f9036999522d78d",
+                "0xa1428f811946aa62c992862c66544c40a4b7ad0e85a379a348f1c43cadfcf36b",
+                "0x5fa3dd6f01ac9c5130636a9364409a7c06901eae104ac1aa0340b624871f1fb5",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0x9C7c2B00Ea7800fbe32FD50d844645Db07C27a74": {
@@ -703,20 +703,20 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x9a6dc4c7100eb626c6e1afdb8ec125a6c1bef95aa4774384a2da2c3d5ac54613",
-                "0x251d0ca55b6bf3ae5ee5485f4b83da37652440ca8d15f3d487386ff061d32f37",
-                "0x33925903967e5aaaeb3818ad5a45cfd044a276bb4118dc16aacb69797430368f",
-                "0xf5e766401ab1bdec6b8db7ecd0ea46c9934206edf096ab820850c0e48bf5a079",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x9c7d84afc4ccab7fe6b9dd92487af06940a72a6ffa059605624695603bfc1424",
+                "0xc748043ca1ff62b3315850b3d3d43a3e4aef61ab47da2b3f7f545ab33d0b9108",
+                "0xa1daece2879603e48ecbb653406bdaf0401e0bf6641dec901996841556239269",
+                "0xc9da79ebeb851e90f1b64b5f643d5bf6489da136bce40f4ae321aa869eb52582",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xa2e44666BAB3ED3be4F87b7c18eD2ffB911c0bEf": {
             "beneficiary": "0xa2e44666BAB3ED3be4F87b7c18eD2ffB911c0bEf",
             "accumulatedAmount": "4341092445013094537758",
             "earnedThisDistribution": "0",
-            "penaltyThisDistribution": "4341092445013094537758",
+            "penaltyThisDistribution": "74823902120381058081490",
             "failedHeartbeats": [
                 "1516",
                 "1544",
@@ -724,13 +724,13 @@
                 "1637"
             ],
             "proof": [
-                "0x9b02843dc281f7bd4de77a9796ec94a7702ebae8182a9ed1d002eccd699d8f7c",
-                "0x251d0ca55b6bf3ae5ee5485f4b83da37652440ca8d15f3d487386ff061d32f37",
-                "0x33925903967e5aaaeb3818ad5a45cfd044a276bb4118dc16aacb69797430368f",
-                "0xf5e766401ab1bdec6b8db7ecd0ea46c9934206edf096ab820850c0e48bf5a079",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x94edcc30a8fc0c86f07d908d34e1e75972cdaaf2dec2a6f2042223655e6b30e8",
+                "0x89b119649240f6a6590a76a812154623b473b81638999ef2823eb2cc915a02b9",
+                "0xa1daece2879603e48ecbb653406bdaf0401e0bf6641dec901996841556239269",
+                "0xc9da79ebeb851e90f1b64b5f643d5bf6489da136bce40f4ae321aa869eb52582",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xA5A51DC547c7d0689a789Db0144C38CF71eD87F1": {
@@ -740,13 +740,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x869f5149a9492f17e09ab171839e7ee26c5fa188d1d9d34a82a69e8b12242610",
-                "0x207a3a4ae4df48cac1ac88a8b1ae64606f8d7d41b9172a0748c1866182f073df",
-                "0xb516312e2c5f248f92c667cb648026e54517f432487757e6a87f1da721b27bcd",
-                "0xf5e766401ab1bdec6b8db7ecd0ea46c9934206edf096ab820850c0e48bf5a079",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x8ac281034d2517c7d87a86ed68ba4bdad6ec95c538c4d96c0fe5323b8d0d384d",
+                "0xb4251684b9fc80c36858985ffdb376f877dc4c43c6ba27f452b313d8caf39b0e",
+                "0xa01bd076f3046bedf73e2c86e191eefdd7cb20060a80f0094dbed85b0e7b7e79",
+                "0xc9da79ebeb851e90f1b64b5f643d5bf6489da136bce40f4ae321aa869eb52582",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xA829c2E33907Ab03d27d5dBb39eFFd8386112789": {
@@ -756,13 +756,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x101b912b6913fba2ab3456fdf844465c8933bcfb54f89bf6a7083000f9251c9f",
-                "0xed305a404b251d649977790756591c0809debc49c9ffb982063f55136eb40553",
-                "0x40923c11d7e0273d075ef7d3c96fa0dbf8bab453c4be530a84279cbb646ed3d2",
-                "0xefe8082ff901a793c8574872b26d62fceed679bb9ea521d8dcd68429d7f1bbd2",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x0cfd8e0b1af45b9849a3129816221a3f5aa4a47db7f970371602e2b1cdd073dc",
+                "0x8ba9af97179389b48e7135ce82e1a70a4c4a45c83de2a404673645daef2e96ed",
+                "0xc15161d5998ae31b9634090a74b6f263eff3612cd80dd69e81c5f6904c021030",
+                "0x992c4c3cc445995b4e20837a051711da8928a4b09bf97a648a774eef76e6855b",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xAa0f47938c5534bb1Fe30E9D61dC0fFDd18c171b": {
@@ -772,13 +772,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xa7b2719fdaceb39afffa830e450abb9ea6211f67be4321f434f463fd65395142",
-                "0xd726ae6facd5d73224a86fff5dff70c06be7d02fcbd6940af1d3ca2bd2400ef3",
-                "0x049c1154a83a0d67ff87f26abbc4778f852a9d9daedc4f9fb437bff5a9c4f62e",
-                "0x75ebbfdda9a77606e5fd42f04efc1b29c821a0eafe3da839fe2b034a89aeb2e4",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xa8b15a2374c82fbb3c633dee76ca6c15c47982b34e55878e83bd5d239a8c2745",
+                "0x73b1308de6cb68f4790945e494853c6cc6343c1b4d8c7042bd5a86a8827edf74",
+                "0xb54adaa80aa8367b7512fc5bbdfd068e326ad034f0dd3b40c1b173afc39e23ac",
+                "0x34b92638bf279cf0373f7de52a6e73a180bf17dee2aa6a4c75e9462fd2c44315",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xb011b6794F271B1d8D2328eDf332535343CB4D44": {
@@ -788,13 +788,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x4d97cb6e3ef90450521fed16776139e2da8576dfe54d74d90b989b3b1d061380",
-                "0x1fab0bf22c196f79798af46bd7aea333113e83251bbed9ed29afae340fea4348",
-                "0xd8842a89248a7a4d7c9761bcc06240dc2e5d36ccff12220ec55aca15fa6d7dc8",
-                "0xbd123bcfc245b981040e7ed9d3f591f980febdc976478b59bd57c1ff92f74249",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x50a1f5d8ac276ead75a8d268b839b0c24b8b85ce2699f08b0dd0f6514b48e5d8",
+                "0xa41ea4b2c19f5c03b37f2ce7a0725d6f72012b0f81e68aba7f1857fe5e8f8d92",
+                "0xa1428f811946aa62c992862c66544c40a4b7ad0e85a379a348f1c43cadfcf36b",
+                "0x5fa3dd6f01ac9c5130636a9364409a7c06901eae104ac1aa0340b624871f1fb5",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xB2e1515Dfe9BdE106299C33529C582e5388D195D": {
@@ -804,29 +804,29 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xa758ca1c514685763a6708937715fd269ce1196f7750e308afcdd2446e6973a7",
-                "0xc805c00c0e2d8faa7f47a0dfdf91029b99f419e8e72a89417636e44bf35121e8",
-                "0x297e440da679bd6d9309b93b0c62a60f9109f272e9cf237dae62f5d543b04eb0",
-                "0x75ebbfdda9a77606e5fd42f04efc1b29c821a0eafe3da839fe2b034a89aeb2e4",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xa4f9506347bd07f487f5f135243a07bac1f6fb049fc2e12565127ada7af7ba7a",
+                "0xf9a4fd730b5b1f18b14350d9b62886dbe51be4c833664b880effa874e2752f37",
+                "0x4c546f2d53bcffec978a8179fecfa9f8197ff6d34ee6beb18a01ec526b4b586f",
+                "0x34b92638bf279cf0373f7de52a6e73a180bf17dee2aa6a4c75e9462fd2c44315",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xb42543Aa1C4a75e1B317b752b82E64513989fEA6": {
             "beneficiary": "0x6950c4C7E97c7d2e6b5bffEC4634f841DB2A5f3D",
-            "accumulatedAmount": "70119863013698630136987",
-            "earnedThisDistribution": "23116438356164383561644",
+            "accumulatedAmount": "93236301369863013698631",
+            "earnedThisDistribution": "46232876712328767123288",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x275e3371a13751de7e81c750faac8fda3f53056d07c424433283e19b38828185",
-                "0x634a0e9ab228a14cda70c1e5447ed038054fc6b61db5bd7e92e8ba478f8d30aa",
-                "0x259d6f88c704f68caa92218114dfce191fd1f4605782b0533202091443127b31",
-                "0xc57d7b0ae6485cf4cac97ffdaede4bcee6d6c6574a9a6105fc5bb970757bc300",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x2f83501067bd1dfdf22ef19df18de3fd1b0ef027fc8397d4d9e0953baaa6a579",
+                "0x510184a7bd93eb7bb62a86ac1a4950870d66859a06cbf8fc5afd10e7d48f6e9b",
+                "0x1620f0e4ed1b10be416fd48d9374740ff3617a44e20522adf8374a7aef4f7802",
+                "0x464d18f9c0b3241b882bd0da2c55bc2b3d20f05c5541140576b4e763382ef9fc",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xb70c8D55D397aA5d76f96c64b3E4084DB95c739E": {
@@ -836,13 +836,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x7ba4fe2227f43bdb762429bee0d1271915e632c62e81c89801f418871b6bbc65",
-                "0x1bcf969bf43cf0c6c42d199b87832e328e79dc089b58d7a7fb86565471e96f87",
-                "0x36cc71870ba457531ca684a5ec66f667967ef852ac09f1c697209f2b27e1f97b",
-                "0x767d925f0ff38d8ef11f0ef1c3615dc3d8516a089fec2a6e5758ccb4b1d81e5d",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x7fd9854c5d78a1491a45a028a71de705b4707e52d169efff7f101a244d7f2455",
+                "0x259def04509a33cec32f132e61aed22c1e280aaf39a2c8f92b1e253ea9eba43c",
+                "0x8b77ee338b9f4c1afb1a42759a98aa204d380b5bd3d5db29521d105d8ce6b757",
+                "0x95e929434298c963e1bc4617045afc10bff615fc119ae8a853c9746018f9005c",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xB8Ee380FD71eaCCB4948dd7CEE5B6FCB822Fc4fc": {
@@ -853,12 +853,12 @@
             "failedHeartbeats": [],
             "proof": [
                 "0xb2a54f9f8211e519e48635d9c08cc4dd7e9be7d185ae1a918a5a0f56205ac2e3",
-                "0xa415d2a24339716f200a6d1109b727320c2ace49c6ffbcdae6928ebbb2dbad6d",
-                "0x44f1b65583156a2470405e4005fc3cd04fa6fd334acb65c096bda99183aa1201",
-                "0xe105cb68e4af5283044554ba5cf82f7c30b0a460f299bb8b7e8f0a20cec64119",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xf1ca3757c066fadd5b8836494dfaa79c3b1fdc276cb6279be8164259fece90cd",
+                "0x9d838d7c2a21054573ab95fbbae10ae4b9f6ad04d7a3806f2160a49265e58fb4",
+                "0x280ec6754d229dd8177fdc3a01935575bcf3766d40beb8c96456521779b9cd9a",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xB98a82aB97171504bf9eA0aC62A3f34BffE5F510": {
@@ -868,13 +868,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x5d8d0181b055b563b3cc373339964358db2f5fe9a48cb3dcd64192069b101a7f",
-                "0x81825873df988b26d96364cfcf68818c23fa2f39889658a257b2479311bb7e0b",
-                "0x57defe5515eb02a52d250fad024dacb116d10218f320c986063ad94c41e8e052",
-                "0xbd123bcfc245b981040e7ed9d3f591f980febdc976478b59bd57c1ff92f74249",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x53838e295ff64abb8434477d2df203a27de0665b05cbaf0c702308dee8241b9d",
+                "0x2f0bcea188a575f965e94f09ef16c2eaa8bf8b12253368bbc33de9487c56f7d7",
+                "0x3360ce50fed23ed99dcb9c2c2c20aa05307ee92e4292124cb5f0aa740c3b6f8a",
+                "0x5fa3dd6f01ac9c5130636a9364409a7c06901eae104ac1aa0340b624871f1fb5",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xB99f5EbC5F61120515F67FbB9aB9693605FbaB06": {
@@ -884,11 +884,11 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xd202c1239520cab4863b58ec1d1d2ab0c21685cd57807eed97d6830954d1a71a",
-                "0xa8ab394e8a204e507cb14bc26849e719138cd37af8bd106d1b91e05ee20ccb5d",
-                "0x8e38b58b6fa8a98b53e74e05c8f2f1beb1c31bfe6f826741069672ee0aa68d2f",
-                "0x930c6ff353286ec8a4aee410f2756740d97af0f01acfa577d344788c19d69806",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xc7631a88a7e4588fe83d867bba68852829702b1217f2c010f3686d92ebac0215",
+                "0xa8c04987b2cf056ce382553efdfb0bd2a6e716754bb7110341121605247206c2",
+                "0x65b6ecb60e98468fe32a0d97af116df1422f160d93155d333be4e88cf56ba70e",
+                "0xdee3f1504ce3281854f327df49a861f7bb57a121dd88118d88830fbbb9f9ec80",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0xBa03E5e2fD41092c36354435FeFAE25A322AA838": {
@@ -898,10 +898,10 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xe7c07e1ab1b1f7bcf437e262984b13bb19cb30830bee441b9afb266514c58b1f",
-                "0xbd15eb132b6e1838b675cb11af0f895b619fb22e2cc02703dfa798fd10dd0ddc",
-                "0xfd1031225277d6db4822ec8d5b88376d96747ed4d6bfc3fd3f2e20093cd71a31",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xe79129d8d5b02bb23040bf24ef47d9883332a187db21953a3493b1c96b64f8c0",
+                "0xfd9cccfb739203a203da4bf92db7c096b8b099bd8d8e765dfab330f0385aa859",
+                "0x5135299f341d1f7ffeb7a2a5fed8251ba883337f4827b36e11d1cd0306aec81a",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0xC24CACfAe6E5D0177E294a89486AfdDF2144f20F": {
@@ -911,26 +911,29 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xa07a68ab72aee767b5738a466fd3f5930406db706e2bd449f46de328b7297f34",
-                "0xa8f10a299d0226746b8920cd16cf8ee12ee6f808f1e678d0c464187fdf9448de",
-                "0x297e440da679bd6d9309b93b0c62a60f9109f272e9cf237dae62f5d543b04eb0",
-                "0x75ebbfdda9a77606e5fd42f04efc1b29c821a0eafe3da839fe2b034a89aeb2e4",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x9b02843dc281f7bd4de77a9796ec94a7702ebae8182a9ed1d002eccd699d8f7c",
+                "0xc748043ca1ff62b3315850b3d3d43a3e4aef61ab47da2b3f7f545ab33d0b9108",
+                "0xa1daece2879603e48ecbb653406bdaf0401e0bf6641dec901996841556239269",
+                "0xc9da79ebeb851e90f1b64b5f643d5bf6489da136bce40f4ae321aa869eb52582",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xC4f03E31BF9677b4c76315931a2cbCF40C6dB1be": {
             "beneficiary": "0xC4f03E31BF9677b4c76315931a2cbCF40C6dB1be",
-            "accumulatedAmount": "93493150684931506849316",
-            "earnedThisDistribution": "30821917808219178082192",
+            "accumulatedAmount": "108904109589041095890412",
+            "earnedThisDistribution": "46232876712328767123288",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xeb54e37343d0e5726a96a92ba189b587a0c142b535bdb6a4ec02af98875bfed9",
-                "0xbd15eb132b6e1838b675cb11af0f895b619fb22e2cc02703dfa798fd10dd0ddc",
-                "0xfd1031225277d6db4822ec8d5b88376d96747ed4d6bfc3fd3f2e20093cd71a31",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xa07a68ab72aee767b5738a466fd3f5930406db706e2bd449f46de328b7297f34",
+                "0xeb35113dc5ded3dd2926745b91e6a0597ede6f8cba0d2858a75bcd38d479aef4",
+                "0x4c546f2d53bcffec978a8179fecfa9f8197ff6d34ee6beb18a01ec526b4b586f",
+                "0x34b92638bf279cf0373f7de52a6e73a180bf17dee2aa6a4c75e9462fd2c44315",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xc8A6Bfe0834FB99340a0Df253d79B7CaE25053b8": {
@@ -942,11 +945,10 @@
                 "1537"
             ],
             "proof": [
-                "0xe76d305162555540f7d84e431af29e18f992b3c87eb5048e98b1c89ad5185e91",
-                "0x5e726bbb8255ccae489a9d7293eedb12a033ce47e0bc768834a558f59dd8a530",
-                "0x544511613dfb0c238267d7b8c2d4cf9570ab2c2ff9b7378c44d77c1d063290c3",
-                "0xfd1031225277d6db4822ec8d5b88376d96747ed4d6bfc3fd3f2e20093cd71a31",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xeb54e37343d0e5726a96a92ba189b587a0c142b535bdb6a4ec02af98875bfed9",
+                "0xfd9cccfb739203a203da4bf92db7c096b8b099bd8d8e765dfab330f0385aa859",
+                "0x5135299f341d1f7ffeb7a2a5fed8251ba883337f4827b36e11d1cd0306aec81a",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0xCC5D4B816e34d9DCCb898872F58317E8af110fC2": {
@@ -956,13 +958,11 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xb7c5c34c1f81df62e2c0eb1e5a80f89ff7a74bccfc5cdea0fe5569245a483221",
+                "0xc027dcf714fc947409f6c4fe78b05fab4395ff9e7b2b9859439fa7dc08e588ac",
                 "0xd7d52a9fdcf57565bd2d234363c191a6bc00bbb1da3161af50df8d878f889d18",
-                "0x50197fb426b8194b578b8f3afe4527c17ddd6fe2b0f086a01052f2aa5395fdd2",
-                "0xe105cb68e4af5283044554ba5cf82f7c30b0a460f299bb8b7e8f0a20cec64119",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xa5d8941e6466193b8d1e8c37ce4388780de4a6fccce64d36c662e90810eb0097",
+                "0xdee3f1504ce3281854f327df49a861f7bb57a121dd88118d88830fbbb9f9ec80",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0xD0908B1E0f6e64e3097c663BF95E2E9c040dd40d": {
@@ -973,12 +973,12 @@
             "failedHeartbeats": [],
             "proof": [
                 "0x74e6521ff84ab6cc2569641fa4c2255f5b84e8f4449eb12220e97358a2d09a78",
-                "0xca7b590014f482a9b016c81230025c5f75deb41d3e433651a61f3de2054cbbdb",
-                "0x6432f854eacb976e7a1618fe2f17ec60ce6742bc8a5821b4410498f6db999fba",
-                "0x767d925f0ff38d8ef11f0ef1c3615dc3d8516a089fec2a6e5758ccb4b1d81e5d",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xcebb30280299451c9130362afe1113c791e73b6d9c9c48181b6e38c3d0c51850",
+                "0xc70a7c537d689867c55122b91bbdc13d3e4fc320092a80658de004220937f56a",
+                "0x95e929434298c963e1bc4617045afc10bff615fc119ae8a853c9746018f9005c",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xd517479ACAef258Baa3ba6A351e9C714a79d597e": {
@@ -988,11 +988,11 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xcb720fa4d2afafb98dacf79760e11936d7cd49c9742d2c1e81d28de10b1b76c7",
-                "0xa8ab394e8a204e507cb14bc26849e719138cd37af8bd106d1b91e05ee20ccb5d",
-                "0x8e38b58b6fa8a98b53e74e05c8f2f1beb1c31bfe6f826741069672ee0aa68d2f",
-                "0x930c6ff353286ec8a4aee410f2756740d97af0f01acfa577d344788c19d69806",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xd6649311ba909a446d407198d146cc1ee5ef02573518d69fed2c05c1a0b163cf",
+                "0xf2507f4d63dc0eab6c121e98ed0da7d952e28a27c6fa3434ef3d1439932449d7",
+                "0x65b6ecb60e98468fe32a0d97af116df1422f160d93155d333be4e88cf56ba70e",
+                "0xdee3f1504ce3281854f327df49a861f7bb57a121dd88118d88830fbbb9f9ec80",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0xD680B01503CF95A489010dA7409980060991D096": {
@@ -1003,12 +1003,12 @@
             "failedHeartbeats": [],
             "proof": [
                 "0x139c76c64e9c3ed56e07898d33ed3dff1545d3687cf06b737b80e94b53341053",
-                "0xb8dda0d8b31227ff999a2aae43a44bb06b276fd6c3e61ac6f1f0ab14f228d6de",
-                "0xf472ffecfaa4d1fb640df44d069d14dede8cecd1718a9ccbb8e9cd7c8f31c8d0",
-                "0xefe8082ff901a793c8574872b26d62fceed679bb9ea521d8dcd68429d7f1bbd2",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x73f73323731f8ec12ef1355b1e4505f31d5c00a25723a52cbd2c4d43afd0e24c",
+                "0x80f4408925e9fba08881b3967a5b866e52d4a07cdf1648621fa005b719274098",
+                "0x992c4c3cc445995b4e20837a051711da8928a4b09bf97a648a774eef76e6855b",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xD6edf0bc0C19f87eCEf67632BFCd212ce8324aB9": {
@@ -1019,12 +1019,12 @@
             "failedHeartbeats": [],
             "proof": [
                 "0xa9f5c426a8baa127780256d9ff886be4424435a49b9428bb49997637f76b70de",
-                "0x86dc763c28f71260af1bcb40bd645b40573f7d09d89a3aef4147ab2ab150b777",
-                "0x049c1154a83a0d67ff87f26abbc4778f852a9d9daedc4f9fb437bff5a9c4f62e",
-                "0x75ebbfdda9a77606e5fd42f04efc1b29c821a0eafe3da839fe2b034a89aeb2e4",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xa415d2a24339716f200a6d1109b727320c2ace49c6ffbcdae6928ebbb2dbad6d",
+                "0xea74a663ee55cd3554e38425753cae420b66bf16861043971742548915d0064c",
+                "0x280ec6754d229dd8177fdc3a01935575bcf3766d40beb8c96456521779b9cd9a",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xd6Fc4e95E0622DdedAD3289dF7873d8136645E8d": {
@@ -1034,13 +1034,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x651123f5b68cdcd896a58be070b97e073f9b62cd251959706d016e79bf3c8331",
+                "0x69e33bd309ae913661fd731f592257151a08da9e815f3343e00d492e841a1e7d",
                 "0x3a93fc65c950ea73afd2e0231449b8d8c8bd72b142ecf1297ba42b00c0aa70d9",
-                "0x6432f854eacb976e7a1618fe2f17ec60ce6742bc8a5821b4410498f6db999fba",
-                "0x767d925f0ff38d8ef11f0ef1c3615dc3d8516a089fec2a6e5758ccb4b1d81e5d",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xc70a7c537d689867c55122b91bbdc13d3e4fc320092a80658de004220937f56a",
+                "0x95e929434298c963e1bc4617045afc10bff615fc119ae8a853c9746018f9005c",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xd7c6DcFC25Ff4e0c76D7753db848E38F90E056e4": {
@@ -1050,13 +1050,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x50a1f5d8ac276ead75a8d268b839b0c24b8b85ce2699f08b0dd0f6514b48e5d8",
-                "0x11694c464e2beb401cc61d60b68471557ede23e1a6adf943e67f5ce40d072ae7",
-                "0xd8842a89248a7a4d7c9761bcc06240dc2e5d36ccff12220ec55aca15fa6d7dc8",
-                "0xbd123bcfc245b981040e7ed9d3f591f980febdc976478b59bd57c1ff92f74249",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x554abde5b9049652c7ac23fa865844bb83ec6e11d2251c6f265ffda91b44f9ce",
+                "0x2f0bcea188a575f965e94f09ef16c2eaa8bf8b12253368bbc33de9487c56f7d7",
+                "0x3360ce50fed23ed99dcb9c2c2c20aa05307ee92e4292124cb5f0aa740c3b6f8a",
+                "0x5fa3dd6f01ac9c5130636a9364409a7c06901eae104ac1aa0340b624871f1fb5",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xe01Be841B1E192390949E9ea1779b1897E105802": {
@@ -1066,13 +1066,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x2a38f57abcc4a84af430da155ed4711bb012f2a59c85255d43aa0aba86e2188c",
-                "0xc9916e4c971a8c54076396e35e1a1e31e7a367f25105143ca8ba3f0f78dfd6dd",
-                "0x259d6f88c704f68caa92218114dfce191fd1f4605782b0533202091443127b31",
-                "0xc57d7b0ae6485cf4cac97ffdaede4bcee6d6c6574a9a6105fc5bb970757bc300",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x291bc57e43ca7c122b21762282b973b92d22653185af772c5f2cba97362ec4af",
+                "0xd48de25b2d3fe2b204c4cd521c692843add26a4288eae5a1331bfbfefa82ba7b",
+                "0x1620f0e4ed1b10be416fd48d9374740ff3617a44e20522adf8374a7aef4f7802",
+                "0x464d18f9c0b3241b882bd0da2c55bc2b3d20f05c5541140576b4e763382ef9fc",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xe3B1C5653D520E8e8c60fE76dbC61f0e2259A376": {
@@ -1082,11 +1082,11 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xdf5185e93b4eed30ac10684480ac9214f133ca2894ba198de008ed161a1b0329",
-                "0x911a8835b42ad2361e6045cb59fef7c831f196d175fdc879954c8e863d7ec9c1",
-                "0x871d084c44b57136350ec86b2b46dc3e44fdfabfc8cc98a930857457097eb7cb",
-                "0x930c6ff353286ec8a4aee410f2756740d97af0f01acfa577d344788c19d69806",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xe58a83c39af27a21643a5943632ab3669f7880f9361edf935496ff57c655f0a2",
+                "0xebac699f3ff533f458f662d56a76e458f129688f86524bd89ffec9939ad0dc91",
+                "0x967827b88eab269c1e507a46dbe3bc8fff392314e8e78417ccef83f8fc8aa957",
+                "0x5135299f341d1f7ffeb7a2a5fed8251ba883337f4827b36e11d1cd0306aec81a",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0xE58dfD1bC7f3Ca2b694bDFDc1C6cac80179A7515": {
@@ -1096,45 +1096,45 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x53838e295ff64abb8434477d2df203a27de0665b05cbaf0c702308dee8241b9d",
-                "0x11694c464e2beb401cc61d60b68471557ede23e1a6adf943e67f5ce40d072ae7",
-                "0xd8842a89248a7a4d7c9761bcc06240dc2e5d36ccff12220ec55aca15fa6d7dc8",
-                "0xbd123bcfc245b981040e7ed9d3f591f980febdc976478b59bd57c1ff92f74249",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x4e2d57c70726c7da198889d85e9775c6e79d082f3997951cfc152e7f86506b44",
+                "0xa41ea4b2c19f5c03b37f2ce7a0725d6f72012b0f81e68aba7f1857fe5e8f8d92",
+                "0xa1428f811946aa62c992862c66544c40a4b7ad0e85a379a348f1c43cadfcf36b",
+                "0x5fa3dd6f01ac9c5130636a9364409a7c06901eae104ac1aa0340b624871f1fb5",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xE9f73E649bE50EA458400cE97552c9a681d54475": {
             "beneficiary": "0xeaf047aDfF888526210B95e2F1F9D10f5053574C",
-            "accumulatedAmount": "70119863013698630136987",
-            "earnedThisDistribution": "23116438356164383561644",
+            "accumulatedAmount": "47126714373145417479679",
+            "earnedThisDistribution": "123289715611170904336",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x619e7db95d8bb5600a36abe40ed7650ee6a51b90d0b25987b47f74dff48705aa",
-                "0xb108367b3c083430d8775278627c10de0abf3edbf2f072a3d54e97596fd46afc",
-                "0x57defe5515eb02a52d250fad024dacb116d10218f320c986063ad94c41e8e052",
-                "0xbd123bcfc245b981040e7ed9d3f591f980febdc976478b59bd57c1ff92f74249",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0xa9e375ece7fe97786201484de97ac2f999820ddd4e48222940d7662d897123bc",
+                "0x73b1308de6cb68f4790945e494853c6cc6343c1b4d8c7042bd5a86a8827edf74",
+                "0xb54adaa80aa8367b7512fc5bbdfd068e326ad034f0dd3b40c1b173afc39e23ac",
+                "0x34b92638bf279cf0373f7de52a6e73a180bf17dee2aa6a4c75e9462fd2c44315",
+                "0xbd8896b9b760a6b97015bfb5be4c6278b1cfa9b3ecd620fb56c3e0caa74c6797",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xeb0b91452E77335c18Dee21467331dadAa77DA8D": {
             "beneficiary": "0xcD326Fb405184cDa42A0D4a6D01199A83bed2862",
-            "accumulatedAmount": "15957630667808219178082",
-            "earnedThisDistribution": "5260757363013698630137",
+            "accumulatedAmount": "10696873304794520547945",
+            "earnedThisDistribution": "0",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xbf6e9a11c3cd61f3ef6556c09be418a4ea0323a7dc36a77bfb922c78937c80fd",
-                "0xd7d52a9fdcf57565bd2d234363c191a6bc00bbb1da3161af50df8d878f889d18",
-                "0x50197fb426b8194b578b8f3afe4527c17ddd6fe2b0f086a01052f2aa5395fdd2",
-                "0xe105cb68e4af5283044554ba5cf82f7c30b0a460f299bb8b7e8f0a20cec64119",
-                "0xf5c92ea0c8c5f3b588910d7083540dd0d24b189ac3178f96ddb53006e5edc951",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x0b9a1efcd384afbb0f3591c9b9e1e309e5090dd8d3663b5c47565a38a57367ec",
+                "0x5a1c2b7560689c08f24dd469132ba582f1c915524d7edf0f677835639f29c481",
+                "0xc15161d5998ae31b9634090a74b6f263eff3612cd80dd69e81c5f6904c021030",
+                "0x992c4c3cc445995b4e20837a051711da8928a4b09bf97a648a774eef76e6855b",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xecE5148Dc2Ec7031C2171959bAd71e9a3bB06DF5": {
@@ -1144,43 +1144,43 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x7f6f97fe28fb57d79cb161fbab534be3d93bc11ffa610aea10b07ab0c68238b6",
-                "0x1bcf969bf43cf0c6c42d199b87832e328e79dc089b58d7a7fb86565471e96f87",
-                "0x36cc71870ba457531ca684a5ec66f667967ef852ac09f1c697209f2b27e1f97b",
-                "0x767d925f0ff38d8ef11f0ef1c3615dc3d8516a089fec2a6e5758ccb4b1d81e5d",
-                "0x47b8e5ba8ab8a48cf4a259c11b462766b6195bdb5c6d35f5bb8d522136315e42",
-                "0x56b72c90bc4472d22bd3f4089e3ce1b6c09aff3495d6bb929b19b675ba82b9dd",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x7b5ce7310512e784eac1086228a917a42591ab075e44b7d055bc900f043573d6",
+                "0xb098d8d4e7e2d687694d4a7d31a88789e2839b19a53f88c3c79c0d2e7b3cb188",
+                "0x8b77ee338b9f4c1afb1a42759a98aa204d380b5bd3d5db29521d105d8ce6b757",
+                "0x95e929434298c963e1bc4617045afc10bff615fc119ae8a853c9746018f9005c",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xEd2A484d48F7782047c2De930D236Ef2A18eE195": {
             "beneficiary": "0x6950c4C7E97c7d2e6b5bffEC4634f841DB2A5f3D",
-            "accumulatedAmount": "70119863013698630136987",
-            "earnedThisDistribution": "23116438356164383561644",
+            "accumulatedAmount": "93236301369863013698631",
+            "earnedThisDistribution": "46232876712328767123288",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xc8160874f17aaf0df82f79c9bb97601dd14bd86228de7d73816e637232a28680",
-                "0x802c1e932f110b79473306ac28412830527ab40239f5ba8202682aee01e95eee",
-                "0x8e38b58b6fa8a98b53e74e05c8f2f1beb1c31bfe6f826741069672ee0aa68d2f",
-                "0x930c6ff353286ec8a4aee410f2756740d97af0f01acfa577d344788c19d69806",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xcb720fa4d2afafb98dacf79760e11936d7cd49c9742d2c1e81d28de10b1b76c7",
+                "0xa8c04987b2cf056ce382553efdfb0bd2a6e716754bb7110341121605247206c2",
+                "0x65b6ecb60e98468fe32a0d97af116df1422f160d93155d333be4e88cf56ba70e",
+                "0xdee3f1504ce3281854f327df49a861f7bb57a121dd88118d88830fbbb9f9ec80",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         },
         "0xF4F55133da27351844792C19D0c85c57F45CbAD6": {
             "beneficiary": "0x6950c4C7E97c7d2e6b5bffEC4634f841DB2A5f3D",
-            "accumulatedAmount": "70119863013698630136987",
-            "earnedThisDistribution": "23116438356164383561644",
+            "accumulatedAmount": "93236301369863013698631",
+            "earnedThisDistribution": "46232876712328767123288",
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x2947bb44a682e3dfc97462a7485c9f28b289054baace77901c784862191b5740",
-                "0xc9916e4c971a8c54076396e35e1a1e31e7a367f25105143ca8ba3f0f78dfd6dd",
-                "0x259d6f88c704f68caa92218114dfce191fd1f4605782b0533202091443127b31",
-                "0xc57d7b0ae6485cf4cac97ffdaede4bcee6d6c6574a9a6105fc5bb970757bc300",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x7429016fe66ecd98d9975b40d8798a5ce8d52b66c68b98cd21cf0a2baa314902",
+                "0x3a93fc65c950ea73afd2e0231449b8d8c8bd72b142ecf1297ba42b00c0aa70d9",
+                "0xc70a7c537d689867c55122b91bbdc13d3e4fc320092a80658de004220937f56a",
+                "0x95e929434298c963e1bc4617045afc10bff615fc119ae8a853c9746018f9005c",
+                "0x31796a34c2d5d6198bd790bfbc1ff7667275e970d06b0b3bbd085f4f3d5e20fe",
+                "0x7ce83bbed9c3b2df2b4ee9a52ba35440849c9f54207b2fb2dfcfebbb1dd44e67",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xF9283aC13aEc8a2B60a56A82F1f5E4dA1742CCf8": {
@@ -1190,13 +1190,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x18621e9ec77bd5888c37b9be5abe29048ce6d9e584b613863f5c0f39f982aacb",
+                "0x13cb367d550a6936cfc7a24e757db72cdfeabb67274f50d751a24ba63f2e7690",
                 "0x79d0e287aa9d912ff4ca31f1fc92a6ec77070fdd6f142e67c86dc5248036e36b",
-                "0xf472ffecfaa4d1fb640df44d069d14dede8cecd1718a9ccbb8e9cd7c8f31c8d0",
-                "0xefe8082ff901a793c8574872b26d62fceed679bb9ea521d8dcd68429d7f1bbd2",
-                "0x340410430652091a27438b6bbfd90581594a8ad5cf0baaad2dcf7fee9269ca37",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x80f4408925e9fba08881b3967a5b866e52d4a07cdf1648621fa005b719274098",
+                "0x992c4c3cc445995b4e20837a051711da8928a4b09bf97a648a774eef76e6855b",
+                "0x5507975001702f4f9f83ab2fed3d110499d3ec987ac5671fbbc52d8d0452b5b3",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xFCA99f5b5Ecf19343e309d8dbe79F15a0A389769": {
@@ -1212,12 +1212,12 @@
             ],
             "proof": [
                 "0x45076d024d139710ccb598d021f4026e8978b29d426107c3452984bc3664fd65",
-                "0x1f852aa3e7fcfb62ec73096339b2b2253c476453c0853b4f38dd807c06892213",
-                "0x00df16a98ebb3e2d8d4413eae04dc782c032f6f46abc0eb4f3433d4586317d5b",
-                "0x0947db1180d8164bc5cf0a4bdc878ac521aec75010f8393f5af96e0a942743f1",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x69e2f5fe54e4c7e79a7ee917e63b5ce29346fe2d346be5f00c7ab00ddfd9cf53",
+                "0xbf8b537caded3982558d0f5e59ee41f8d0dae2240a4410acedae8753663381ba",
+                "0x6175046f252f8bc2952ae92f3eba54c6dcfe434fd8238067cb530f005ae59f60",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xfD771E3e34A93E19CAaD4C11c3Be16c70d5ec2Fd": {
@@ -1227,13 +1227,13 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0x64eb7f292f1941694b16b9fa4ab9a8cdab3df06f89b2da56a24cd604b2c28274",
-                "0xb108367b3c083430d8775278627c10de0abf3edbf2f072a3d54e97596fd46afc",
-                "0x57defe5515eb02a52d250fad024dacb116d10218f320c986063ad94c41e8e052",
-                "0xbd123bcfc245b981040e7ed9d3f591f980febdc976478b59bd57c1ff92f74249",
-                "0x94379bfba5e22414b06c0e863d0a00492e91df8f81bb56a2bbf94e18b7159a7b",
-                "0x64cd4f6f69b2e815b7f4316eccae8d4f458874dece065ab5b5fa1c43d16fafd1",
-                "0xe7e5cfe4e16581fe562758477d7a586e5daf12db01b2728d83baa39cc17515ee"
+                "0x651123f5b68cdcd896a58be070b97e073f9b62cd251959706d016e79bf3c8331",
+                "0xbfa3287d0b5878248c35a5a7b2634c67d4dbc26cf2d98a09653f08fe257428cb",
+                "0x3360ce50fed23ed99dcb9c2c2c20aa05307ee92e4292124cb5f0aa740c3b6f8a",
+                "0x5fa3dd6f01ac9c5130636a9364409a7c06901eae104ac1aa0340b624871f1fb5",
+                "0xb6414b83ea243b53bf139011449406eba26232cfee90579713a2f6c4cc3f688c",
+                "0x7e86efb95ad88a9bf2087939176b538588d24728adbe2ff2a29f496531f633a8",
+                "0x9b7ffe9a6cd57ee41f564792cd3ff71cf24e39c4cd9a022f0db2b26d872f091a"
             ]
         },
         "0xFEf6503A2cf17DB14fae5d5874A50522677cFcEc": {
@@ -1243,11 +1243,11 @@
             "penaltyThisDistribution": "0",
             "failedHeartbeats": [],
             "proof": [
-                "0xd6c1dfefd55ecdfc1c86ecb9d76c2c4eebd4965cbcb21c3cc4743d2f70be082e",
-                "0x545f69dcac443ac299062c99febfcbefbf334e843db3c589db413b0c50ea2b26",
-                "0x871d084c44b57136350ec86b2b46dc3e44fdfabfc8cc98a930857457097eb7cb",
-                "0x930c6ff353286ec8a4aee410f2756740d97af0f01acfa577d344788c19d69806",
-                "0xc28a8f023f63f0b8e81787ad267d2d8c5a7c4e827eed9bd15724d9f018a8dc75"
+                "0xd202c1239520cab4863b58ec1d1d2ab0c21685cd57807eed97d6830954d1a71a",
+                "0xf2507f4d63dc0eab6c121e98ed0da7d952e28a27c6fa3434ef3d1439932449d7",
+                "0x65b6ecb60e98468fe32a0d97af116df1422f160d93155d333be4e88cf56ba70e",
+                "0xdee3f1504ce3281854f327df49a861f7bb57a121dd88118d88830fbbb9f9ec80",
+                "0x000b0ccdb23095bcdce2921d95cb387919ee4f1eb4fba0d0c25b2decb81c44e9"
             ]
         }
     },
