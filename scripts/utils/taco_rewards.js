@@ -284,6 +284,10 @@ async function getPotentialRewards(startPeriodTimestamp, endPeriodTimestamp) {
         }
       }
 
+      if (accEligibleAmount.lt(0)) {
+        accEligibleAmount = BigNumber(0);
+      }
+
       const epoch = {
         eligibleAmount: accEligibleAmount.toFixed(0),
         // the bigger timestamp between event's one and op confirmed's one
@@ -344,13 +348,13 @@ async function getPotentialRewards(startPeriodTimestamp, endPeriodTimestamp) {
         duration = endPeriodTimestamp - epochStartTime;
       }
 
-      epochs[i].duration = duration;
+      filteredEpochs[i].duration = duration;
     }
 
     // Calculating the rewards for each epoch
     const conversion_denominator = 100 * 100;
     const rewardsAPR = APR * conversion_denominator;
-    const reward = epochs.reduce((total, cur) => {
+    const reward = filteredEpochs.reduce((total, cur) => {
       // Since TIP-092 and TIP-100, the max eligible amount for rewards is 15MT
       const capAmount = BigNumber(cur.eligibleAmount).gt(15000000 * 10 ** 18)
         ? BigNumber(15_000_000 * 10 ** 18)
@@ -363,7 +367,7 @@ async function getPotentialRewards(startPeriodTimestamp, endPeriodTimestamp) {
     }, BigNumber(0));
 
     const stProvCheckSum = ethers.utils.getAddress(stProv);
-    const beneficiaryCheckSum = ethers.utils.getAddress(epochs[0].beneficiary);
+    const beneficiaryCheckSum = ethers.utils.getAddress(filteredEpochs[0].beneficiary);
 
     rewards[stProvCheckSum] = {
       beneficiary: beneficiaryCheckSum,
