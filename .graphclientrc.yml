@@ -2,7 +2,7 @@ sources:
   - name: development-threshold-subgraph
     handler:
       graphql:
-        endpoint: https://api.goldsky.com/api/public/project_cmgzo6cgq00lc5np2dwaycfdl/subgraphs/threshold-staking/0.0.2/gn
+        endpoint: https://api.goldsky.com/api/public/project_cmgzo6cgq00lc5np2dwaycfdl/subgraphs/threshold-staking/0.0.1/gn
     transforms:
       - autoPagination:
           validateSchema: true
