@@ -328,6 +328,7 @@ async function getPotentialRewards(startPeriodTimestamp, endPeriodTimestamp) {
     );
 
     // calculate the duration of every epoch
+    let duration;
     for (let i = 0; i < filteredEpochs.length; i++) {
       let epochStartTime = filteredEpochs[i].greatestStartTime;
 
