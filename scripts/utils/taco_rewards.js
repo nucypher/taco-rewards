@@ -256,7 +256,7 @@ async function getPotentialRewards(startPeriodTimestamp, endPeriodTimestamp) {
     // on the auth events history (queried to the subgraph)
     for (let i = 0; i < sortedEvents.length; i++) {
       const eventType = sortedEvents[i].eventType;
-      bigNumberEventAmount = BigNumber(sortedEvents[i].eventAmount);
+      const bigNumberEventAmount = BigNumber(sortedEvents[i].eventAmount);
       if (eventType === "AuthorizationIncreased") {
         // on increase, add the amount to the rewards eligible amount
         accEligibleAmount = accEligibleAmount.plus(bigNumberEventAmount);
