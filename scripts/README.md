@@ -17,6 +17,27 @@ Heartbeat DKG rounds are automatically executed every week:
 
 [Heartbeat DKG workflow](https://github.com/nucypher/nucypher-contracts/actions/workflows/heartbeat.yml)
 
+The resulting file should be something like:
+
+```json
+{
+    "1507": [
+        "0x36efDC29c776c35B55D08E657bF3048eDf65b1dD",
+        "0x5F24A56620E8aB22Ff01585F83F6f63F8B5c205E"
+    ],
+    "1508": [
+        "0x3070f20f86fDa706Ac380F5060D256028a46eC29",
+        "0xE58dfD1bC7f3Ca2b694bDFDc1C6cac80179A7515"
+    ],
+    "1509": [
+        "0x456D643CD97b058Fd3bBBEB76f04B1DE3679bc6A",
+        "0xd6Fc4e95E0622DdedAD3289dF7873d8136645E8d"
+    ],
+
+    [...]
+}
+```
+
 #### Usage
 
 ```bash
