@@ -63,7 +63,7 @@ async function getMeshOptions() {
     const additionalTypeDefs = [];
     const developmentThresholdSubgraphHandler = new graphql_1.default({
         name: "development-threshold-subgraph",
-        config: { "endpoint": "https://api.goldsky.com/api/public/project_cmgzo6cgq00lc5np2dwaycfdl/subgraphs/threshold-staking/0.0.2/gn" },
+        config: { "endpoint": "https://api.goldsky.com/api/public/project_cmgzo6cgq00lc5np2dwaycfdl/subgraphs/threshold-staking/0.0.1/gn" },
         baseDir,
         cache,
         pubsub,
@@ -117,8 +117,8 @@ async function getMeshOptions() {
         store: rootStore.child('stitchingMerger')
     });
     const documentHashMap = {
-        "8dc1e3abb3c749310b151d4a2872a2e0d6b4fc2411676d868e8d7bfd8b48577e": exports.TacoAuthHistoryDocument,
-        "a37918f83122f4fcf873612f69400c94d30f364de27d84f23feefa49a0eb5344": exports.TacoOperatorsDocument
+        "a37918f83122f4fcf873612f69400c94d30f364de27d84f23feefa49a0eb5344": exports.TacoOperatorsDocument,
+        "8dc1e3abb3c749310b151d4a2872a2e0d6b4fc2411676d868e8d7bfd8b48577e": exports.TacoAuthHistoryDocument
     };
     additionalEnvelopPlugins.push((0, plugin_persisted_operations_1.usePersistedOperations)({
         getPersistedOperation(key) {
@@ -139,19 +139,19 @@ async function getMeshOptions() {
         get documents() {
             return [
                 {
-                    document: exports.TacoAuthHistoryDocument,
-                    get rawSDL() {
-                        return (0, utils_4.printWithCache)(exports.TacoAuthHistoryDocument);
-                    },
-                    location: 'TacoAuthHistoryDocument.graphql',
-                    sha256Hash: '8dc1e3abb3c749310b151d4a2872a2e0d6b4fc2411676d868e8d7bfd8b48577e'
-                }, {
                     document: exports.TacoOperatorsDocument,
                     get rawSDL() {
                         return (0, utils_4.printWithCache)(exports.TacoOperatorsDocument);
                     },
                     location: 'TacoOperatorsDocument.graphql',
                     sha256Hash: 'a37918f83122f4fcf873612f69400c94d30f364de27d84f23feefa49a0eb5344'
+                }, {
+                    document: exports.TacoAuthHistoryDocument,
+                    get rawSDL() {
+                        return (0, utils_4.printWithCache)(exports.TacoAuthHistoryDocument);
+                    },
+                    location: 'TacoAuthHistoryDocument.graphql',
+                    sha256Hash: '8dc1e3abb3c749310b151d4a2872a2e0d6b4fc2411676d868e8d7bfd8b48577e'
                 }
             ];
         },
