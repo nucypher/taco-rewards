@@ -243,8 +243,8 @@ async function getPotentialRewards(startPeriodTimestamp, endPeriodTimestamp) {
 
     // based on these auth events, let's create "authorization epochs"
     // - each authorization epoch is defined by an authorization change event
-    // - each authorization epoch has a eligible amount and duration
-    // for example, if a stake decreased the full authorization in the half
+    // - each authorization epoch has an eligible amount and duration
+    // for example, if a stake decreased the full authorization in the middle
     // of the month, this stake will have 2 epochs: one with full amount
     // and duration of 15 days, and another epoch with 0 amount and duration
     // of 15 days
