@@ -8,16 +8,26 @@ This directory contains the scripts used in the TACo rewards distribution proces
 
 A CLI-based script for generating TACo rewards distributions.
 
+The calculation of penalization requires a list of the 4 DKG heartbeat rounds
+executed during the month whose rewards we are calculating. This is a JSON file
+containing the artifacts of the DKG heartbeat rounds: it is necessary to
+manually append the four files in a single JSON.
+
+Heartbeat DKG rounds are automatically executed every week:
+
+[Heartbeat DKG workflow](https://github.com/nucypher/nucypher-contracts/actions/workflows/heartbeat.yml)
+
 #### Usage
 
 ```bash
 node scripts/new_rewards_dist.js \
 --start-date <start-date> \
---end-date <end-date>
+--end-date <end-date> \
+--rituals-path <rituals-json-path>
 ```
 
 ```bash
-node scripts/new_rewards_dist.js -s 2025-09-01 -e 2025-10-01
+node scripts/new_rewards_dist.js -s 2025-09-01 -e 2025-10-01 --rituals-path heartbeat-rituals.json
 ```
 
 #### Environment variables
