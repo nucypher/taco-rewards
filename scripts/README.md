@@ -4,20 +4,11 @@ This directory contains the scripts used in the TACo rewards distribution proces
 
 ## Scripts
 
-### new_rewards_dist.js
+### combine_heartbeat_files.js
+A script to combine multiple DKG heartbeat JSON files into a single JSON file.
 
-A CLI-based script for generating TACo rewards distributions.
-
-The calculation of penalization requires a list of the 4 DKG heartbeat rounds
-executed during the month whose rewards we are calculating. This is a JSON file
-containing the artifacts of the DKG heartbeat rounds: it is necessary to
-manually append the four files in a single JSON.
-
-Heartbeat DKG rounds are automatically executed every week:
-
-[Heartbeat DKG workflow](https://github.com/nucypher/nucypher-contracts/actions/workflows/heartbeat.yml)
-
-The resulting file should be something like:
+Heartbeat DKG rounds are automatically executed every week, [Heartbeat DKG workflow](https://github.com/nucypher/nucypher-contracts/actions/workflows/heartbeat.yml).
+Each resulting file should be something like:
 
 ```json
 {
@@ -33,10 +24,37 @@ The resulting file should be something like:
         "0x456D643CD97b058Fd3bBBEB76f04B1DE3679bc6A",
         "0xd6Fc4e95E0622DdedAD3289dF7873d8136645E8d"
     ],
-
     [...]
 }
 ```
+
+#### Usage
+
+```bash
+node ./scripts/combine_heartbeat_files.js -f ./heartbeat-rituals-1.json -f ./heartbeat-rituals-2.json -f ./heartbeat-rituals-3.json -f ./heartbeat-rituals-4.json
+
+Combining heartbeat files:  [
+  './heartbeat-rituals-1.json',
+  './heartbeat-rituals-2.json',
+  './heartbeat-rituals-3.json',
+  './heartbeat-rituals-4.json'
+]
+Reading heartbeat file:  ./heartbeat-rituals-1.json
+Reading heartbeat file:  ./heartbeat-rituals-2.json
+Reading heartbeat file:  ./heartbeat-rituals-3.json
+Reading heartbeat file:  ./heartbeat-rituals-4.json
+✅ Combined heartbeat files written to disk (heartbeats_combined.json)
+```
+
+
+### new_rewards_dist.js
+
+A CLI-based script for generating TACo rewards distributions.
+
+The calculation of penalization requires a combined file of the 4 DKG heartbeat rounds
+executed during the month whose rewards we are calculating. This is a JSON file
+containing the artifacts of the DKG heartbeat rounds: these files can be combined
+using the `combine_heartbeat_files.js` script mentioned above.
 
 #### Usage
 
@@ -48,7 +66,7 @@ node scripts/new_rewards_dist.js \
 ```
 
 ```bash
-node scripts/new_rewards_dist.js -s 2025-09-01 -e 2025-10-01 --rituals-path heartbeat-rituals.json
+node scripts/new_rewards_dist.js -s 2025-09-01 -e 2025-10-01 --rituals-path heartbeats_combined.json
 ```
 
 #### Environment variables
